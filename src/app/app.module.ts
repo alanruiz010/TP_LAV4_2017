@@ -56,7 +56,8 @@ import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/pi
 import { ScoreboardComponent } from './componentes/piedra-papel-tijera/scoreboard/scoreboard.component';
 import { RPSLogoComponent } from './componentes/piedra-papel-tijera/rps-logo/rps-logo.component';
 import { CounterComponent } from './componentes/piedra-papel-tijera/counter/counter.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+  import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -93,6 +94,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     RuteandoModule,
     HttpModule,
     BrowserAnimationsModule,
+    
+     
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     })
