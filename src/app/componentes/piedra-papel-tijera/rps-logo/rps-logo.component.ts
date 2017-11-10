@@ -12,7 +12,7 @@ export class RPSLogoComponent {
   option : RockPaperScissors;
 
   getImageUrl(){
-    let root = 'TP_LAV4_2017/assets/imagenes/';
+    let root = '../TP_LAV4_2017/assets/imagenes/';
     if(this.option === null)
       return root + 'question.jpg';
     return `${root}${RockPaperScissors[this.option].toLowerCase()}.jpg`;
