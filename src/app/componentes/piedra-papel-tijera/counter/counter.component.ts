@@ -1,6 +1,6 @@
 
 import { Component, OnInit, Input, trigger, state, style, transition, animate } from '@angular/core';
-
+ 
 @Component({
   selector: 'counter',
   templateUrl: './counter.component.html',
