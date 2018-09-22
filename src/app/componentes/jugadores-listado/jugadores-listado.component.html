@@ -20,7 +20,7 @@
     <tr *ngFor="let jugador of listado" >
       <td>{{jugador.usuario}} </td>
       <td>{{jugador.cuit}} </td> 
-      <td>{{jugador.sexo}} </td> 
+      <td>{{jugador.sexo | sexo| uppercase}} </td> 
       <td>{{jugador.gano}} </td> 
       
     </tr>

@@ -6,12 +6,48 @@ import { MiHttpService } from './mi-http/mi-http.service';
 @Injectable()
 export class JuegoServiceService {
 
+  myArrayServicio : Array<Juego>;
+  lista:any;
+  list:any;
+  UsuarioLogueado:string;
   peticion:any;
   constructor( public miHttp: MiHttpService ) {
-    this.peticion = this.miHttp.httpGetO("http://localhost:3003");
+    this.peticion = this.miHttp.httpGetO("http://localhost:4200");
+    this.myArrayServicio = new Array<Juego>(); //3003
 //    this.peticion = this.miHttp.httpGetO("https://restcountries.eu/rest/v2/all");
   }
 
+  //constructor(private miServicio : MiHttpService) { 
+   // this.myArrayServicio = new Array<Juego>();
+  // }
+  TraerUsuario(){
+    return this.UsuarioLogueado;
+   }
+
+   CargarUsuario(user:string){
+    this.UsuarioLogueado = user;
+   }
+  
+
+   public CargarLista(ArrayParaPasar:Array<Juego>){
+    this.myArrayServicio.concat(ArrayParaPasar);
+    console.info("En el Servicio: ",ArrayParaPasar);
+  }
+
+  public InicializarLista(){
+
+    return this.myArrayServicio;
+  }
+  
+  public TraerPalabas(){
+       
+    return this.miHttp.TraerPalabra().toPromise()
+    .then(
+    datos=> {
+      console.log("Datos:" + datos);
+      return datos;
+    });
+   }
   public listar(): Array<Juego> {
    this.miHttp.httpGetP("https://restcountries.eu/rest/v2/all")
     .then( data => {

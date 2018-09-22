@@ -4,42 +4,44 @@ import { ArchivosJugadoresService}from './archivos-jugadores.service'
 export class JugadoresService {
 
   //peticion:any;
-  constructor( public miHttp: ArchivosJugadoresService ) {
+  constructor( public miHttp: ArchivosJugadoresService ) //aca llamo al servicio
+  {
    // this.peticion = this.miHttp.traerJugadores();
 //    this.peticion = this.miHttp.httpGetO("https://restcountries.eu/rest/v2/all");
+
   }
 
 
 filtrado:any;
 
   traertodos(ruta : string,filtro: string) 
-  {
-      return this.miHttp.traerJugadores(ruta).then(data=>{
-        console.info("jugadores service",data);
+  {  //http traigo jugadores----then
+    return this.miHttp.traerJugadores(ruta).then(data=>{
+      console.info("jugadores service",data);
 
-        this.filtrado=data;
+      this.filtrado=data;
 
-       let  ganador: boolean;
-        if(filtro=="ganadores")
-        {
-          ganador= true;
-        }
-        else
-        {
-          ganador= false;
-        }
+     let  ganador: boolean;
+      if(filtro=="ganadores")
+      {
+        ganador= true;
+      }
+      else
+      {
+        ganador= false;
+      }
 
-        this.filtrado =this.filtrado.filter(
-          data => data.gano === ganador); return this.filtrado}
-        )
-        .catch(errror=>{console.log("error")
-        
-  
+      this.filtrado =this.filtrado.filter(
+        data => data.gano === ganador  || filtro=="todos" ); return this.filtrado}
+      )//catch devuelvo
+      .catch(errror=>{console.log("error")
+      
 
-      return this.filtrado;
-        
 
-      });
+    return this.filtrado;
+      
+
+    });
   }
 
 }

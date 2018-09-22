@@ -13,15 +13,21 @@ export class MiHttpService {
   constructor(public http:Http) { }
   
   public httpGetPromise(url: string, objeto:any){
-
-
     return this.http
     .get(url)
     .toPromise()
     .then(this.extraerDatos)
     .catch(this.handleError);
   }
+//public
 
+public TraerPalabra(): Observable<Response>{
+  return this.http
+  .get("../../assets/palabras.json")
+  .map(this.extraerDatos)
+  .catch(this.handleError);
+}
+ 
   private extraerDatos(resp:Response) {
 
       return resp.json() || {};

@@ -13,12 +13,13 @@ export class MiHttpService {
 
   constructor( public http: Http ) { }
 
-  public httpGetP ( url: string)
+  public httpGetP ( url: string)// aca recibe una url
+  //api="http://localhost:8080/jugadoresarchivo/apirestjugadores/";  debo poer esto en el parametro
   {
     return this.http
-    .get( url )
+    .get( url ) //url podria pasarle mas paramettros
     .toPromise()
-    .then( this.extractData )
+    .then( this.extractData ) //extraccion de datos
     .catch( this.handleError );
   }
 
@@ -38,8 +39,35 @@ export class MiHttpService {
       .map( ( res: Response ) => res.json())
       .catch( ( err: any ) => Observable.throw(err.json().error || 'Server error'));
   }
+///// estos son los agregados
+  public TraerPalabra(): Observable<Response>{
+    return this.http
+    .get("../../../assets/palabras.json")
+    .map(this.extraerDatos)
+    .catch(this.handleError);
+  }
+///// estos son los agregados
+  public httpGetJuagdorPromise(url: string, objeto:any){
+    return this.http
+    .get(url)
+    .toPromise()
+    .then(this.extraerDatos)
+    .catch(this.handleError);
+  }
+  ///// estos son los agregados
+  public httpGetJuagdorPromiseO(url: string): Observable<Response>{
+    
+    return this.http.get( url )
+    .map( ( res: Response ) => res.json())
+    .catch( ( err: any ) => Observable.throw(err.json().error || 'Server error'));
+   }
+///// estos son los agregados
+  private extraerDatos(resp:Response) {
 
+      return resp.json() || {};
 
+  }
+//===========================================================
   private extractData ( res: Response )
   {
     return res.json() || {};

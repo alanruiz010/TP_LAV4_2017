@@ -29,7 +29,19 @@ export class JugadoresListadoComponent implements OnInit {
 
     })
   }
-  TraerGanadores(){alert("Ganadores");}
-  TraerPerdedores(){alert("Perdedores");}
+  TraerGanadores(){
+    this.miJugadoresServicio.traertodos('jugadores/','ganadores').then(data=>{
+      //console.info("jugadores listado",(data));
+      this.listado= data;
+
+    })
+  }
+  TraerPerdedores(){
+    this.miJugadoresServicio.traertodos('jugadores/','perdedores').then(data=>{
+      //console.info("jugadores listado",(data));
+      this.listado= data;
+
+    })
+  }
 
 }

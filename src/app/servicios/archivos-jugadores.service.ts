@@ -3,8 +3,9 @@ import { MiHttpService } from './mi-http/mi-http.service';
 
 @Injectable()
 export class ArchivosJugadoresService {
-
-  api="http://localhost:8080/jugadoresarchivo/apirestjugadores/";
+//archivo jugadores seria mi servicio 1
+  api="http://localhost:8080/jugadoresarchivo/apirestjugadores/"; // esto deberia estar en el generico
+  //se le tiene quepasar la ruta
   peticion:any;
   constructor( public miHttp: MiHttpService ) {
     

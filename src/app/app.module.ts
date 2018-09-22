@@ -50,13 +50,10 @@ import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
 import { AnagramaComponent } from './componentes/anagrama/anagrama.component';
 import { ListadoDePaisesComponent } from './componentes/listado-de-paises/listado-de-paises.component';
 import { MapaDeGoogleComponent } from './componentes/mapa-de-google/mapa-de-google.component'
-import { AgmCoreModule } from '@agm/core';
+import { AgmCoreModule } from '../../node_modules/@agm/core';
 import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
-import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
-import { ScoreboardComponent } from './componentes/piedra-papel-tijera/scoreboard/scoreboard.component';
-import { RPSLogoComponent } from './componentes/piedra-papel-tijera/rps-logo/rps-logo.component';
-import { CounterComponent } from './componentes/piedra-papel-tijera/counter/counter.component';
-//import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { SexoPipe } from './pipes/sexo.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,18 +78,13 @@ import { CounterComponent } from './componentes/piedra-papel-tijera/counter/coun
     MapaDeGoogleComponent,
     JugadoresListadoComponent,
     InputJugadoresComponent,
-    PiedraPapelTijeraComponent,
-    ScoreboardComponent,
-    RPSLogoComponent,
-    
-    CounterComponent
+    SexoPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RuteandoModule,
     HttpModule,
-    //BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     })
