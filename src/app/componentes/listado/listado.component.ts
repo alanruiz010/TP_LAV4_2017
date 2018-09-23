@@ -11,6 +11,7 @@ export class ListadoComponent implements OnInit {
   public listadoParaCompartir: Array<any>;
    miServicioJuego:JuegoServiceService
 
+   
   constructor(public servicioJuego:JuegoServiceService) {
     this.miServicioJuego = servicioJuego;
    // constructor(public servicioJuego:JuegoServiceService)  

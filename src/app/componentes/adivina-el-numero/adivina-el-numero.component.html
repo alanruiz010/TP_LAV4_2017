@@ -9,10 +9,12 @@
 <h2></h2>
 <form name="juego">
 
-   <label>ingrese numero:  </label>  <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%"/>
+   <label>ingrese numero:  </label>  
+   <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%"/>
     <h1>{{nuevoJuego.numeroIngresado}}  </h1>
  
-    <h2 [hidden]="ocultarVerificar"><button  *ngIf="nuevoJuego.numeroSecreto!=0" (click)="verificar()" class="btn btn-success btn-lg">Verificar</button></h2>
+    <h2 [hidden]="ocultarVerificar">
+      <button  *ngIf="nuevoJuego.numeroSecreto!=0" (click)="verificar()" class="btn btn-success btn-lg">Verificar</button></h2>
  
     <h2><button *ngIf="nuevoJuego.numeroSecreto==0 " (click)="generarnumero()"  class="btn btn-info btn-lg">Nuevo número secreto</button></h2>
  
@@ -24,3 +26,26 @@
 
 </form>
 <div id="snackbar">{{Mensajes}}</div>
+
+<!--
+  <div style="text-align:center ;font-family: 'Press Start 2P',cursive;color: white; ">
+    <h2>
+     Adivina el numero
+    </h2>
+   </div>
+  
+      <form name="juego" style="font-family: 'Press Start 2P',cursive; font-size: 10px" >
+        
+        <div class="centro" >
+        <label>ingrese numero:  </label>  <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:20%"/>
+      
+          <h2 [hidden]="ocultarVerificar"><button  *ngIf="nuevoJuego.numeroSecreto!=0" (click)="verificar()" class="btn2">Verificar</button></h2>
+      
+          <h2><button *ngIf="nuevoJuego.numeroSecreto==0 " (click)="generarnumero()"  class="btn2 orange">Nuevo número secreto</button></h2>
+      
+          <h2><p *ngIf="nuevoJuego.numeroSecreto!=0" ></p></h2>
+
+          
+        </div>
+      </form>
+<div id="snackbar">{{Mensajes}}</div>-->
