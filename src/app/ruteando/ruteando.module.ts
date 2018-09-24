@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // importo del module principal
 import { RouterModule, Routes } from '@angular/router';
-import { AdivinaElNumeroComponent } from '../componentes/adivina-el-numero/adivina-el-numero.component';
+
 import { ListadoDeResultadosComponent } from '../componentes/listado-de-resultados/listado-de-resultados.component';
 import { LoginComponent } from '../componentes/login/login.component';
 import { ErrorComponent } from '../componentes/error/error.component';
 import { PrincipalComponent } from '../componentes/principal/principal.component';
-import { AgilidadAritmeticaComponent } from '../componentes/agilidad-aritmetica/agilidad-aritmetica.component';
+
 import { MenuComponent } from '../componentes/menu/menu.component';
-import { AdivinaMasListadoComponent } from '../componentes/adivina-mas-listado/adivina-mas-listado.component';
-import { AgilidadMasListadoComponent } from '../componentes/agilidad-mas-listado/agilidad-mas-listado.component';
+
+
 import { ListadoComponent } from'../componentes/listado/listado.component'
 import { ListadosComponent } from '../componentes/listados/listados.component';
 import { JuegosComponent } from '../componentes/juegos/juegos.component';
@@ -22,6 +22,14 @@ import { ListadoDePaisesComponent } from '../componentes/listado-de-paises/lista
 import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-google.component'
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
 
+//import { AnagramaMasListadoComponent } from '../componentes/anagrama-mas-listado/anagrama-mas-listado.component';
+import { AdivinaElNumeroComponent } from '../componentes/adivina-el-numero/adivina-el-numero.component';
+import { AdivinaMasListadoComponent } from '../componentes/adivina-mas-listado/adivina-mas-listado.component';
+import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
+import { PPTijeraComponent } from '../componentes/pptijera/pptijera.component';
+import { PPTijeraMasListadoComponent } from '../componentes/pptijera-mas-listado/pptijera-mas-listado.component';
+import { AgilidadAritmeticaComponent } from '../componentes/agilidad-aritmetica/agilidad-aritmetica.component';
+import { AgilidadMasListadoComponent } from '../componentes/agilidad-mas-listado/agilidad-mas-listado.component';
 
 // declaro donde quiero que se dirija
 const MiRuteo = [
@@ -40,8 +48,11 @@ component: JuegosComponent ,
 children:
      [{path: '' , component: MenuCardComponent},
      {path: 'Adivina' , component: AdivinaElNumeroComponent},
-      {path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
+     {path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
+     {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
       {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
+      {path: 'AnagramaMasListado' , component: AnagramaComponent},
+      {path: 'PPTijeraMasListado' , component: PPTijeraMasListadoComponent},
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent}]
 },
 {path: '**' , component: ErrorComponent},

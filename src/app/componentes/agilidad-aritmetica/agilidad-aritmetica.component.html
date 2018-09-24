@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <!--app-menu></app-menu-->
 <!-- index.html -->
-
+<!--
 
 <form name="juego">
 <ul>
@@ -35,4 +35,34 @@
   </li>
 </ul>
 
+</form>-->
+
+
+<div style="text-align:center ;font-family: 'Press Start 2P',cursive;color: white; ">
+    <h2>
+     Agilidad Aritmetica
+    </h2>
+   </div>
+
+<form name="juego" style="font-family: 'Press Start 2P',cursive; font-size: 10px">
+  <div class="centro">
+<h3 style="text-align: center">{{nuevoJuego.numero1}}
+    {{nuevoJuego.operardorMostrar}}
+    {{nuevoJuego.numero2}}</h3>
+  
+ <h3>
+    Respuesta: <input [(ngModel)]="nuevoJuego.resultadoParticipante" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%"/>
+ </h3>
+  
+    <h2 [hidden]="ocultarVerificar" ><button (click)="verificar()" class="btn2">Verificar {{Tiempo}} </button></h2>
+ 
+    <h2 [hidden]="!ocultarVerificar"><button  (click)="NuevoJuego()"  class="btn2 orange">Nuevo</button></h2>
+  
+  
+
+ 
+
+</div>
 </form>
+<div id="snackbar">{{Mensajes}}</div>
+
