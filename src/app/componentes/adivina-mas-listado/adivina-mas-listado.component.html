@@ -1,5 +1,16 @@
-
+<!--
 <app-adivina-el-numero (enviarJuego)="tomarJuegoTerminado($event)">   </app-adivina-el-numero> 
 <h1> listado </h1>
 <app-listado-de-resultados [listado]="listadoParaCompartir"> </app-listado-de-resultados>
+-->
 
+<div class="row">
+    <div class="col-sm-6">
+        
+            <app-adivina-el-numero (enviarJuego)="tomarJuegoTerminado($event)">   </app-adivina-el-numero> 
+      </div>
+    <div class="col-sm-6">
+        <app-listado-de-resultados [listado]="listadoParaCompartir"> </app-listado-de-resultados>
+    </div>
+    
+  </div>

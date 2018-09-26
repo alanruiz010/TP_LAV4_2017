@@ -8,7 +8,8 @@ import { JuegoServiceService } from '../../servicios/juego-service.service';
   styleUrls: ['./adivina-mas-listado.component.css']
 })
 export class AdivinaMasListadoComponent implements OnInit {
-  public listadoParaCompartir: Array<any>;
+  //public listadoParaCompartir: Array<any>;
+  public listadoParaCompartir: any;
   lista:any;
 
   //constructor() { this.listadoParaCompartir = new Array<any>()}

@@ -35,8 +35,8 @@ import { AnagramaMasListadoComponent } from '../componentes/anagrama-mas-listado
 // declaro donde quiero que se dirija
 const MiRuteo = [
 {path: 'Jugadores' , component: JugadoresListadoComponent},
-{path: '' , component: PrincipalComponent},
-{path: 'Login' , component: LoginComponent},
+//{path: '' , component: PrincipalComponent},
+{path: '' , component: LoginComponent},
 {path: 'Mapa' , component: MapaDeGoogleComponent},
 {path: 'QuienSoy' , component: QuienSoyComponent},
 {path: 'Registro' , component: RegistroComponent},

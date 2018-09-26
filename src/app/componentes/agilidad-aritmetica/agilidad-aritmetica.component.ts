@@ -8,6 +8,7 @@ import { JuegoServiceService } from '../../servicios/juego-service.service';
 
 
 
+
 @Component({
   selector: 'app-agilidad-aritmetica',
   templateUrl: './agilidad-aritmetica.component.html',

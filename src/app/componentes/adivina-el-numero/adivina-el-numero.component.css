@@ -1,8 +1,23 @@
 
 form {
+  
+    width: 100%;
+    margin: 0; padding: 0;
+}
+
+label{
+    font-family: 'Press Start 2P',cursive; 
+    font-size: 13px;
+}
+.centro{
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
     border: 10px solid #f1f1f1;
-    padding: 10px;
-    background:gray;
+    background: #3664F3;
+    text-align: center;
+    align-items: center;
+   
 }
 
 input[type=text], input[type=password] {
@@ -14,19 +29,7 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-button {
-    /*background-color: #4CAF50;*/
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
 
-button:hover {
-    opacity: 0.8;
-}
 
 .cancelbtn {
     width: auto;
@@ -73,17 +76,21 @@ span.psw {
 #snackbar {
     visibility: hidden;
     min-width: 250px;
-    margin-left: -125px;
-   
+    margin-right: 300px;
+    margin-left: 300px; 
+    
+    
+    font-family: 'Press Start 2P',cursive; 
+    font-size: 15px;
+
     color: #fff;
     text-align: center;
     border-radius: 2px;
     padding: 16px;
     position: fixed;
     z-index: 1;
-    left: 50%;
+    left: 5%;
     bottom: 30px;
-    font-size: 17px;
 }
 #snackbar.Ganador {
     background-color: #059F2F;
@@ -116,3 +123,5 @@ span.psw {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
 }
+
+

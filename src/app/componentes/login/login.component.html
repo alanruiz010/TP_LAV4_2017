@@ -55,3 +55,44 @@
     </form>
   </div>
 </div>
+<!--
+
+  <br><br><br><br><br><br>
+
+<form name="juego" style="font-family: 'Press Start 2P',cursive; font-size: 10px">
+    <div class="centro">
+      <h2></h2>
+            
+      <div class="imgcontainer">
+          <img src="../../TP_LAV4_2017/assets/imagenes/login.gif" alt="Avatar" class="avatar" max-width="104" >
+        </div>
+
+        <label><b>Usuario</b></label>
+        <input type="text" placeholder="Usuario"  [(ngModel)]="usuario"  name="uname" required>
+<h5></h5>
+        <label><b>Clave</b></label>
+        <input type="password" placeholder="Clave"  [(ngModel)]="clave" name="psw" required>
+            
+        
+       
+        <div *ngIf="!logeando" class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped active" [class]="clase" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" [style.width]="ProgresoDeAncho" >
+              {{progresoMensaje}} - {{progreso}}%
+            </div>
+        </div>
+       
+        
+        <h2></h2>
+        <button class="btn2" *ngIf="logeando"  (click)="MoverBarraDeProgreso()" >Ingresar</button>
+        <button class="btn2 red" routerLink="/Registro" >Registrarse</button>
+        <H2></H2>
+      </div>
+
+    
+        
+    
+     
+      <h3></h3>
+  
+</form>
+-->
