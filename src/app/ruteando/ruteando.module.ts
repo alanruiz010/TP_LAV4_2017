@@ -30,6 +30,7 @@ import { PPTijeraComponent } from '../componentes/pptijera/pptijera.component';
 import { PPTijeraMasListadoComponent } from '../componentes/pptijera-mas-listado/pptijera-mas-listado.component';
 import { AgilidadAritmeticaComponent } from '../componentes/agilidad-aritmetica/agilidad-aritmetica.component';
 import { AgilidadMasListadoComponent } from '../componentes/agilidad-mas-listado/agilidad-mas-listado.component';
+import { AnagramaMasListadoComponent } from '../componentes/anagrama-mas-listado/anagrama-mas-listado.component';
 
 // declaro donde quiero que se dirija
 const MiRuteo = [
@@ -51,9 +52,10 @@ children:
      {path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
      {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
       {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
-      {path: 'AnagramaMasListado' , component: AnagramaComponent},
-      {path: 'PPTijeraMasListado' , component: PPTijeraMasListadoComponent},
-      {path: 'Agilidad' , component: AgilidadAritmeticaComponent}]
+      {path: 'Anagrama' , component: AnagramaComponent},
+      {path: 'AnagramaMasListado' , component: AnagramaMasListadoComponent},
+      {path: 'PPTijeraMasListado' , component: PPTijeraMasListadoComponent}]
+      
 },
 {path: '**' , component: ErrorComponent},
 {path: 'error' , component: ErrorComponent}];

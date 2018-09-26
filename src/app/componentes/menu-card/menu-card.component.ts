@@ -27,9 +27,9 @@ export class MenuCardComponent implements OnInit {
   case 'PPT':
       this.router.navigate(['/Juegos/PPTijeraMasListado']);
     break;
-    case 'Trivia':
-    this.router.navigate(['/Juegos/TriviaPaices']);
-  break;
+   // case 'Anagrama':
+    //this.router.navigate(['/Juegos/AnagramaMasListado']);
+ // break;
     }
   }
 }

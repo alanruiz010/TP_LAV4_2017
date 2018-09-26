@@ -63,6 +63,7 @@ import { AdivinaMasListadoComponent } from './componentes/adivina-mas-listado/ad
 import { AgilidadMasListadoComponent } from './componentes/agilidad-mas-listado/agilidad-mas-listado.component';
 import {PPTijeraComponent} from './componentes/pptijera/pptijera.component';
 import {PPTijeraMasListadoComponent} from './componentes/pptijera-mas-listado/pptijera-mas-listado.component';
+import { AnagramaMasListadoComponent } from './componentes/anagrama-mas-listado/anagrama-mas-listado.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import {PPTijeraMasListadoComponent} from './componentes/pptijera-mas-listado/pp
     InputJugadoresComponent,
     SexoPipe,
     PPTijeraComponent,
-    PPTijeraMasListadoComponent
+    PPTijeraMasListadoComponent,
+    AnagramaMasListadoComponent
   ],
   imports: [
     BrowserModule,
