@@ -64,6 +64,7 @@ import { AgilidadMasListadoComponent } from './componentes/agilidad-mas-listado/
 import {PPTijeraComponent} from './componentes/pptijera/pptijera.component';
 import {PPTijeraMasListadoComponent} from './componentes/pptijera-mas-listado/pptijera-mas-listado.component';
 import { AnagramaMasListadoComponent } from './componentes/anagrama-mas-listado/anagrama-mas-listado.component';
+import { TaTeTiComponent } from './componentes/ta-te-ti/ta-te-ti.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,8 @@ import { AnagramaMasListadoComponent } from './componentes/anagrama-mas-listado/
     SexoPipe,
     PPTijeraComponent,
     PPTijeraMasListadoComponent,
-    AnagramaMasListadoComponent
+    AnagramaMasListadoComponent,
+    TaTeTiComponent
   ],
   imports: [
     BrowserModule,

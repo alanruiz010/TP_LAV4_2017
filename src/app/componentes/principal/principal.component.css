@@ -20,3 +20,18 @@ height: 70px;
     background-size: cover;
     position: relative;
 }
+
+form {
+    
+    width: 100%;
+    margin: 0; padding: 0;
+}
+.centro{
+  margin-right: auto;
+  margin-left: auto;
+  
+  text-align: center;
+  align-items: center;
+  
+ 
+}

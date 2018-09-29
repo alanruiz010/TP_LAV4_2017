@@ -2,24 +2,31 @@ import { Injectable } from '@angular/core';
 import { Juego } from '../clases/Juego';
 import { JuegoAdivina } from '../clases/juego-adivina';
 import { MiHttpService } from './mi-http/mi-http.service'; 
+import { Router } from '@angular/router';
 
 @Injectable()
 export class JuegoServiceService {
-
+  miRoute: Router;
+  resultados: any;
   myArrayServicio : Array<Juego>;
   lista:any;
   list:any;
   UsuarioLogueado:string;
   peticion:any;
-  constructor( public miHttp: MiHttpService ) {
+
+  constructor( public miHttp: MiHttpService) {
     this.peticion = this.miHttp.httpGetO("http://localhost:4200");
-    this.myArrayServicio = new Array<Juego>(); //3003
+    this.myArrayServicio = new Array<Juego>();
+   
+     //3003
 //    this.peticion = this.miHttp.httpGetO("https://restcountries.eu/rest/v2/all");
   }
 
   //constructor(private miServicio : MiHttpService) { 
    // this.myArrayServicio = new Array<Juego>();
   // }
+
+
   TraerUsuario(){
     return this.UsuarioLogueado;
    }
@@ -56,6 +63,10 @@ export class JuegoServiceService {
     .catch( err => {
       console.log( err );
     });
+//Cargar para el tateti
+
+
+    
    
   
     this.peticion
