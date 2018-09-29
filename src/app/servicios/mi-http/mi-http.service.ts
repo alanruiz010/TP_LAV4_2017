@@ -2,15 +2,20 @@ import { log } from 'util';
 import { Injectable } from '@angular/core';
 
 import { Http, Response } from '@angular/http';
-
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
 
 @Injectable()
 export class MiHttpService {
-
+  public api: string = "http://gametimeback.herokuapp.com/";
   constructor( public http: Http ) { }
 
   public httpGetP ( url: string)// aca recibe una url
@@ -23,6 +28,7 @@ export class MiHttpService {
     .catch( this.handleError );
   }
 
+ 
   public httpPostP( url: string, objeto: any )
   {
     return this.http
@@ -32,6 +38,9 @@ export class MiHttpService {
       return data;
     });
   }
+ /* public httpPosttateti(url: string, objeto: any) {
+    return this.http.post(url, objeto, httpOptions);
+  }*/
 
   public httpGetO ( url: string): Observable<Response>
   {
