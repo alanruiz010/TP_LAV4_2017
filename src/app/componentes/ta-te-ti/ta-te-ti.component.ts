@@ -1,119 +1,108 @@
-/*import { Component, OnInit } from '@angular/core';
+
+import { Component } from '@angular/core';
+import {MatSnackBar} from '@angular/material';
+import { Router } from '@angular/router';
+import { GameService } from './game.service';
 
 @Component({
   selector: 'app-ta-te-ti',
   templateUrl: './ta-te-ti.component.html',
-  styleUrls: ['./ta-te-ti.component.css']
+  styleUrls: ['./ta-te-ti.component.css'],
+  providers: [GameService]
 })
-export class TaTeTiComponent implements OnInit {
+export class TaTeTiComponent {
+  
+	lock = false;
 
-  constructor() { }
+	constructor(public gs: GameService, public snackBar: MatSnackBar, private router: Router) {
+		
+	}
 
-  ngOnInit() {
-  }
+	newGame() {
+		this.gs.freeBlocksRemaining = 9;
+		this.gs.initBlocks();
+		this.lock = false;
+		this.gs.turn = 0;
+	}
 
-}
-*/
-import { Component, OnInit } from '@angular/core';
-import { JuegoTaTeTi } from '../../clases/juego-tateti';
-import { JuegoServiceService } from '../../servicios/juego-service.service';
+	resetGame(event) {
+		event.preventDefault();
+    location.reload();
+	}
 
-@Component({
-  selector: 'app-ta-te-ti',
-  templateUrl: './ta-te-ti.component.html',
-  styleUrls: ['./ta-te-ti.component.css']
-})
-export class TaTeTiComponent implements OnInit {
-  nuevoJuego: JuegoTaTeTi;
-  isEnd: boolean = false;
-  thinking: boolean = false;
-  juegoService: JuegoServiceService;
+	playerClick(i) {
+		if( this.gs.blocks[i].free == false || this.lock == true ) { // If Block is already fill, don't Do anything
+			return;
+		}
 
-  constructor(juegoService: JuegoServiceService) {
-    this.nuevoJuego = new JuegoTaTeTi();
-    this.juegoService = juegoService;
-  }
+		this.gs.freeBlocksRemaining -= 1; // Reduce no. of free blocks after each selection
 
-  play(position: string) {
-    if (!this.isEnd && this.nuevoJuego.gano != null && !this.thinking) {
-      let moveDone = false;
-      if (position == '1' && this.nuevoJuego.spot1 == '') {
-        this.nuevoJuego.spot1 = 'cross';
-        moveDone = true;
-      } else if (position == '2' && this.nuevoJuego.spot2 == '') {
-        this.nuevoJuego.spot2 = 'cross';
-        moveDone = true;
-      } else if (position == '3' && this.nuevoJuego.spot3 == '') {
-        this.nuevoJuego.spot3 = 'cross';
-        moveDone = true;
-      } else if (position == '4' && this.nuevoJuego.spot4 == '') {
-        this.nuevoJuego.spot4 = 'cross';
-        moveDone = true;
-      } else if (position == '5' && this.nuevoJuego.spot5 == '') {
-        this.nuevoJuego.spot5 = 'cross';
-        moveDone = true;
-      } else if (position == '6' && this.nuevoJuego.spot6 == '') {
-        this.nuevoJuego.spot6 = 'cross';
-        moveDone = true;
-      } else if (position == '7' && this.nuevoJuego.spot7 == '') {
-        this.nuevoJuego.spot7 = 'cross';
-        moveDone = true;
-      } else if (position == '8' && this.nuevoJuego.spot8 == '') {
-        this.nuevoJuego.spot8 = 'cross';
-        moveDone = true;
-      } else if (position == '9' && this.nuevoJuego.spot9 == '') {
-        this.nuevoJuego.spot9 = 'cross';
-        moveDone = true;
-      }
-      if (moveDone) {
-        this.verificar();
-        if (!this.isEnd) {
-          this.thinking = true;
-          let that = this;
-          let time = Math.floor((Math.random() * 1000) + 100);
-          setTimeout(function () {
-            that.thinking = false;
-            that.nuevoJuego.botPlays();
-            that.verificar();
-          }, time);
-        }
-      }
-    }
-  }
+		if( this.gs.freeBlocksRemaining <= 0 ) {
 
-  verificar() {
-    this.isEnd = this.nuevoJuego.verificar();
-    if (this.isEnd) {
-      if (!this.nuevoJuego.gano) {
-        if (this.nuevoJuego.nivel > 1) {
-          this.register();
-        }
-        this.nuevoJuego.nivel = 1;
-      } else {
-        this.nuevoJuego.nivel++;
-      }
-    }
-  }
+			this.gs.draw += 1;
+			this.lock = true;
+			this.snackBar.open("Juego:", "Empate", {
+		      duration: 4000,
+		    });
+			this.newGame();
+			return;
+		}
 
-  start() {
-    this.nuevoJuego.reset();
-  }
 
-  ngOnInit() {
-  }
+		this.gs.blocks[i].free = false;
 
-  closeModal() {
-    this.isEnd = false;
-    this.nuevoJuego.gano = null;
-  }
+		if( this.gs.turn == 0 ) { // Player1 Turn
+			this.gs.blocks[i].setValue("tick");
+		
+		} else { // Bot Turn
+			this.gs.blocks[i].setValue("cross");	
+		}
 
-  register() {
-    let objeto: { juego: string, nivel: number, tiempo: number } = {
-      juego: 'TicTacToe',
-      nivel: this.nuevoJuego.nivel,
-      tiempo: 0
-    }
-    //this.juegoService.
-    //this.juegoService.cargar(objeto);
-  }
+		var complete = this.gs.blockSetComplete();
+
+		if( complete == false ) {
+			this.changeTurn();	
+			return;
+			
+		} else {
+			this.lock = true;
+			this.gs.players[this.gs.turn].score += 1;
+			this.snackBar.open("Ganador:", "Jugador "+ (this.gs.turn +1), {
+		      duration: 4000,
+		    });
+
+		    this.newGame();
+		    return;
+		}
+		
+	}
+
+
+	botTurn() {
+
+		if( this.gs.freeBlocksRemaining <= 0 ) {
+			return;
+		}
+
+		var bot_selected = this.gs.figureBotMove()-1;
+		
+		if( this.gs.blocks[bot_selected].free == true ) {
+			this.playerClick(bot_selected);	
+		} else {
+			this.botTurn();
+			return;
+		}
+
+	}
+
+
+	changeTurn() {
+		var player = this.gs.changeTurn();
+
+		if( player == 1 ) { // Bot Turn
+			this.botTurn();
+		
+		}
+	}
+
 }

@@ -66,6 +66,9 @@ import {PPTijeraMasListadoComponent} from './componentes/pptijera-mas-listado/pp
 import { AnagramaMasListadoComponent } from './componentes/anagrama-mas-listado/anagrama-mas-listado.component';
 import { TaTeTiComponent } from './componentes/ta-te-ti/ta-te-ti.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {  MatSnackBarModule, MatGridListModule} from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,6 +104,9 @@ import { TaTeTiComponent } from './componentes/ta-te-ti/ta-te-ti.component';
     FormsModule,
     RuteandoModule,
     HttpModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule, 
+    MatGridListModule,
     // AgmCoreModule.forRoot({
     //   apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     // })

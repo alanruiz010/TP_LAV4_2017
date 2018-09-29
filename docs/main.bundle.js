@@ -110,6 +110,8 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__componentes_pptijera_mas_listado_pptijera_mas_listado_component__ = __webpack_require__("../../../../../src/app/componentes/pptijera-mas-listado/pptijera-mas-listado.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__componentes_anagrama_mas_listado_anagrama_mas_listado_component__ = __webpack_require__("../../../../../src/app/componentes/anagrama-mas-listado/anagrama-mas-listado.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__componentes_ta_te_ti_ta_te_ti_component__ = __webpack_require__("../../../../../src/app/componentes/ta-te-ti/ta-te-ti.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -168,6 +170,8 @@ const MiRuteo = [{path: 'error' , component: ErrorComponent},
 
 
 
+
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -206,9 +210,12 @@ AppModule = __decorate([
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_13__ruteando_ruteando_module__["a" /* RuteandoModule */],
             __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_37__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_38__angular_material__["c" /* MatSnackBarModule */],
+            __WEBPACK_IMPORTED_MODULE_38__angular_material__["a" /* MatGridListModule */],
         ],
         providers: [__WEBPACK_IMPORTED_MODULE_18__servicios_juego_service_service__["a" /* JuegoServiceService */], __WEBPACK_IMPORTED_MODULE_6__servicios_mi_http_mi_http_service__["a" /* MiHttpService */], __WEBPACK_IMPORTED_MODULE_7__servicios_paises_service__["a" /* PaisesService */], __WEBPACK_IMPORTED_MODULE_9__servicios_archivos_jugadores_service__["a" /* ArchivosJugadoresService */], __WEBPACK_IMPORTED_MODULE_8__servicios_jugadores_service__["a" /* JugadoresService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
@@ -468,141 +475,6 @@ var PiedraPapelTijera = (function (_super) {
 }(__WEBPACK_IMPORTED_MODULE_0__clases_juego__["a" /* Juego */]));
 
 //# sourceMappingURL=juego-piedra-papel-tijera.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/clases/juego-tateti.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JuegoTaTeTi; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__juego__ = __webpack_require__("../../../../../src/app/clases/juego.ts");
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-var JuegoTaTeTi = (function (_super) {
-    __extends(JuegoTaTeTi, _super);
-    function JuegoTaTeTi(nombre, gano, jugador) {
-        var _this = _super.call(this, "TaTeTi", gano, jugador) || this;
-        _this.spot1 = '';
-        _this.spot2 = '';
-        _this.spot3 = '';
-        _this.spot4 = '';
-        _this.spot5 = '';
-        _this.spot6 = '';
-        _this.spot7 = '';
-        _this.spot8 = '';
-        _this.spot9 = '';
-        _this.nivel = 1;
-        return _this;
-    }
-    JuegoTaTeTi.prototype.botPlays = function () {
-        var continuar = true;
-        do {
-            var position = Math.floor((Math.random() * 9) + 1);
-            if (position == 1 && this.spot1 == '') {
-                this.spot1 = 'circle';
-                continuar = false;
-            }
-            else if (position == 2 && this.spot2 == '') {
-                this.spot2 = 'circle';
-                continuar = false;
-            }
-            else if (position == 3 && this.spot3 == '') {
-                this.spot3 = 'circle';
-                continuar = false;
-            }
-            else if (position == 4 && this.spot4 == '') {
-                this.spot4 = 'circle';
-                continuar = false;
-            }
-            else if (position == 5 && this.spot5 == '') {
-                this.spot5 = 'circle';
-                continuar = false;
-            }
-            else if (position == 6 && this.spot6 == '') {
-                this.spot6 = 'circle';
-                continuar = false;
-            }
-            else if (position == 7 && this.spot7 == '') {
-                this.spot7 = 'circle';
-                continuar = false;
-            }
-            else if (position == 8 && this.spot8 == '') {
-                this.spot8 = 'circle';
-                continuar = false;
-            }
-            else if (position == 9 && this.spot9 == '') {
-                this.spot9 = 'circle';
-                continuar = false;
-            }
-        } while (continuar);
-    };
-    JuegoTaTeTi.prototype.verificar = function () {
-        var is_over = false;
-        if (this.spot1 == this.spot4 && this.spot4 == this.spot7 && this.spot7 != '') {
-            this.gano = this.spot1 == 'cross';
-            is_over = true;
-        }
-        else if (this.spot2 == this.spot5 && this.spot5 == this.spot8 && this.spot8 != '') {
-            this.gano = this.spot2 == 'cross';
-            is_over = true;
-        }
-        else if (this.spot3 == this.spot6 && this.spot6 == this.spot9 && this.spot9 != '') {
-            this.gano = this.spot3 == 'cross';
-            is_over = true;
-        }
-        else if (this.spot1 == this.spot5 && this.spot5 == this.spot9 && this.spot9 != '') {
-            this.gano = this.spot1 == 'cross';
-            is_over = true;
-        }
-        else if (this.spot3 == this.spot5 && this.spot5 == this.spot7 && this.spot7 != '') {
-            this.gano = this.spot3 == 'cross';
-            is_over = true;
-        }
-        else if (this.spot1 == this.spot2 && this.spot2 == this.spot3 && this.spot3 != '') {
-            this.gano = this.spot1 == 'cross';
-            is_over = true;
-        }
-        else if (this.spot4 == this.spot5 && this.spot5 == this.spot6 && this.spot6 != '') {
-            this.gano = this.spot4 == 'cross';
-            is_over = true;
-        }
-        else if (this.spot7 == this.spot8 && this.spot8 == this.spot9 && this.spot9 != '') {
-            this.gano = this.spot7 == 'cross';
-            is_over = true;
-        }
-        else if (this.spot1 != '' && this.spot2 != '' && this.spot3 != '' && this.spot4 != '' &&
-            this.spot5 != '' && this.spot6 != '' && this.spot7 != '' && this.spot8 != '' && this.spot9 != '') {
-            this.gano = false;
-            is_over = true;
-        }
-        return is_over;
-    };
-    JuegoTaTeTi.prototype.reset = function () {
-        this.gano = false;
-        this.spot1 = '';
-        this.spot2 = '';
-        this.spot3 = '';
-        this.spot4 = '';
-        this.spot5 = '';
-        this.spot6 = '';
-        this.spot7 = '';
-        this.spot8 = '';
-        this.spot9 = '';
-    };
-    return JuegoTaTeTi;
-}(__WEBPACK_IMPORTED_MODULE_0__juego__["a" /* Juego */]));
-
-//# sourceMappingURL=juego-tateti.js.map
 
 /***/ }),
 
@@ -2565,7 +2437,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/componentes/menu-card/menu-card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<html>\n  <body style=\"background-color:blue\">\n    <div class=\"container\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\n<div class=\"container\" >\n    <div class=\"card\">\n      <img class=\"img-thumbnail\"   src=\"./assets/imagenes/quiensoy.jpg\" alt=\"Avatar\" style=\"width:100%\">\n      <h4>Velocidad y agilidad aritmética </h4>\n     <!-- <p class=\"title\">Juego de agilidad mental</p>\n      <p>UTN FRA </p>\n  \n       <a href=\"#\"><i class=\"fa fa-dribbble\"></i></a> \n      <a href=\"#\"><i class=\"fa fa-twitter\"></i></a> \n      <a href=\"#\"><i class=\"fa fa-linkedin\"></i></a> \n      <a href=\"#\"><i class=\"fa fa-facebook\"></i></a> -->\n      <p>           <button class=\"button\"  (click)=\"Juego('Agilidad')\">Jugar</button></p>\n    \n    </div>\n  \n    <div class=\"card\">\n      <img class=\"img-thumbnail\" src=\"./assets/imagenes/ppt.jpg\" alt=\"Avatar\" style=\"width:100%\">\n      <h4>Piedra Papel o Tijera</h4>\n    <!--   <p class=\"title\">Juega contra la máquina</p>\n     <p>UTN FRA </p>\n      \n        <a href=\"#\"><i class=\"fa fa-dribbble\"></i></a> \n      <a href=\"#\"><i class=\"fa fa-twitter\"></i></a> \n      <a href=\"#\"><i class=\"fa fa-linkedin\"></i></a> \n      <a href=\"#\"><i class=\"fa fa-facebook\"></i></a> -->\n      <p>           <button class=\"button\"  (click)=\"Juego('PPT')\">Jugar</button></p>\n    </div>\n    <div class=\"card\">\n      <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/adivina.png\" alt=\"Avatar\" style=\"width:100%\">\n      <h4>Adivina el número secreto</h4>\n     <!--  <p class=\"title\">Juega de estrategia</p>\n      <p>UTN FRA </p>\n      \n       <a href=\"#\"><i class=\"fa fa-dribbble\"></i></a> \n      <a href=\"#\"><i class=\"fa fa-twitter\"></i></a> \n      <a href=\"#\"><i class=\"fa fa-linkedin\"></i></a> \n      <a href=\"#\"><i class=\"fa fa-facebook\"></i></a> -->\n      <p>           <button class=\"button\"  (click)=\"Juego('Adivina')\">Jugar</button></p>\n    </div>\n    <div class=\"card\">\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/quiensoy3.png\" alt=\"Avatar\" style=\"width:100%\">\n        <h4>Juego Propio</h4>\n       <!-- <p class=\"title\">Juego de Roll</p>\n         <p>UTN FRA </p>\n        \n       <a href=\"#\"><i class=\"fa fa-dribbble\"></i></a> \n        <a href=\"#\"><i class=\"fa fa-twitter\"></i></a> \n        <a href=\"#\"><i class=\"fa fa-linkedin\"></i></a> \n        <a href=\"#\"><i class=\"fa fa-facebook\"></i></a> -->\n        <p>           <button class=\"button\"  (click)=\"Juego('Adivina')\">Jugar</button></p>\n      </div>\n\n      <div class=\"card\">\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/chequear.jpg\" alt=\"Avatar\" style=\"width:100%\">\n        <H4>Anagrama de Palabra</H4>\n      \n        <p>           <button class=\"button\"  (click)=\"Juego('Anagrama')\">Jugar</button></p>\n      </div>\n    </div>\n  </div>\n</body>\n  </html>  \n\n  \n<!--\n<div class=\"container\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\n    <div class=\"card\">\n      <img class=\"img-thumbnail\"   src=\"../../TP_LAV4_2017/assets/imagenes/cerebro.jpg\" alt=\"Avatar\" style=\"width:100%\">\n      <H4>Velocidad aritmética </H4>\n  \n\n      <p>           <button class=\"btn2 blue\"  (click)=\"Juego('Agilidad')\">Jugar</button></p>\n    \n    </div>\n  \n       <div class=\"card\">\n      <img  class=\"img-thumbnail\"  src=\"../../TP_LAV4_2017/assets/imagenes/adivina.png\" alt=\"Avatar\" style=\"width:100%\">\n      <H4>Adivina el número</H4>\n    \n      <p>           <button class=\"btn2 blue\"  (click)=\"Juego('Adivina')\">Jugar</button></p>\n    </div>\n\n    <div class=\"card\">\n        <img class=\"img-thumbnail\" src=\"../../TP_LAV4_2017/assets/imagenes/ppt.jpg\" alt=\"Avatar\" style=\"width:100%\">\n        <H4>Piedra Papel o Tijera</H4>\n       \n        <p>           <button class=\"btn2 blue\"  (click)=\"Juego('PPT')\">Jugar</button></p>\n      </div>\n\n    <div class=\"card\">\n        <img  class=\"img-thumbnail\"  src=\"../../TP_LAV4_2017/assets/imagenes/Palabra.jpg\" alt=\"Avatar\" style=\"width:100%\">\n        <H4>Anagrama de Palabra</H4>\n      \n        <p>           <button class=\"btn2 blue\"  (click)=\"Juego('Anagrama')\">Jugar</button></p>\n      </div>\n \n      <div class=\"card\">\n          <img  class=\"img-thumbnail\"  src=\"../../TP_LAV4_2017/assets/imagenes/banderas.jpg\" alt=\"Avatar\" style=\"width:100%\">\n          <H4>Trivia de Banderas</H4>\n        \n          <p>           <button class=\"btn2 blue\"  (click)=\"Juego('Trivia')\">Jugar</button></p>\n        </div>\n  </div>\n\n-->"
+module.exports = "\r\n<html>\r\n  <body style=\"background-color:blue\">\r\n    <div class=\"container\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\r\n<div class=\"container\" >\r\n    <div class=\"card\">\r\n      <img class=\"img-thumbnail\"   src=\"./assets/imagenes/quiensoy.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n      <h4>Velocidad y agilidad aritmética </h4>\r\n     <!-- <p class=\"title\">Juego de agilidad mental</p>\r\n      <p>UTN FRA </p>\r\n  \r\n       <a href=\"#\"><i class=\"fa fa-dribbble\"></i></a> \r\n      <a href=\"#\"><i class=\"fa fa-twitter\"></i></a> \r\n      <a href=\"#\"><i class=\"fa fa-linkedin\"></i></a> \r\n      <a href=\"#\"><i class=\"fa fa-facebook\"></i></a> -->\r\n      <p>           <button class=\"button\"  (click)=\"Juego('Agilidad')\">Jugar</button></p>\r\n    \r\n    </div>\r\n  \r\n    <div class=\"card\">\r\n      <img class=\"img-thumbnail\" src=\"./assets/imagenes/ppt.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n      <h4>Piedra Papel o Tijera</h4>\r\n    <!--   <p class=\"title\">Juega contra la máquina</p>\r\n     <p>UTN FRA </p>\r\n      \r\n        <a href=\"#\"><i class=\"fa fa-dribbble\"></i></a> \r\n      <a href=\"#\"><i class=\"fa fa-twitter\"></i></a> \r\n      <a href=\"#\"><i class=\"fa fa-linkedin\"></i></a> \r\n      <a href=\"#\"><i class=\"fa fa-facebook\"></i></a> -->\r\n      <p>           <button class=\"button\"  (click)=\"Juego('PPT')\">Jugar</button></p>\r\n    </div>\r\n    <div class=\"card\">\r\n      <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/adivina.png\" alt=\"Avatar\" style=\"width:100%\">\r\n      <h4>Adivina el número secreto</h4>\r\n     <!--  <p class=\"title\">Juega de estrategia</p>\r\n      <p>UTN FRA </p>\r\n      \r\n       <a href=\"#\"><i class=\"fa fa-dribbble\"></i></a> \r\n      <a href=\"#\"><i class=\"fa fa-twitter\"></i></a> \r\n      <a href=\"#\"><i class=\"fa fa-linkedin\"></i></a> \r\n      <a href=\"#\"><i class=\"fa fa-facebook\"></i></a> -->\r\n      <p>           <button class=\"button\"  (click)=\"Juego('Adivina')\">Jugar</button></p>\r\n    </div>\r\n    <div class=\"card\">\r\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/quiensoy3.png\" alt=\"Avatar\" style=\"width:100%\">\r\n        <h4>Juego Propio</h4>\r\n       <!-- <p class=\"title\">Juego de Roll</p>\r\n         <p>UTN FRA </p>\r\n        \r\n       <a href=\"#\"><i class=\"fa fa-dribbble\"></i></a> \r\n        <a href=\"#\"><i class=\"fa fa-twitter\"></i></a> \r\n        <a href=\"#\"><i class=\"fa fa-linkedin\"></i></a> \r\n        <a href=\"#\"><i class=\"fa fa-facebook\"></i></a> -->\r\n        <p>           <button class=\"button\"  (click)=\"Juego('Adivina')\">Jugar</button></p>\r\n      </div>\r\n\r\n      <div class=\"card\">\r\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/chequear.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n        <H4>Anagrama de Palabra</H4>\r\n      \r\n        <p>           <button class=\"button\"  (click)=\"Juego('Anagrama')\">Jugar</button></p>\r\n      </div>\r\n      <div class=\"card\">\r\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/chequear.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n        <H4>Tateti</H4>\r\n        <p>           <button class=\"button\"  (click)=\"Juego('tateti')\">Jugar</button></p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</body>\r\n  </html>  \r\n\r\n  \r\n<!--\r\n<div class=\"container\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\r\n    <div class=\"card\">\r\n      <img class=\"img-thumbnail\"   src=\"../../TP_LAV4_2017/assets/imagenes/cerebro.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n      <H4>Velocidad aritmética </H4>\r\n  \r\n\r\n      <p>           <button class=\"btn2 blue\"  (click)=\"Juego('Agilidad')\">Jugar</button></p>\r\n    \r\n    </div>\r\n  \r\n       <div class=\"card\">\r\n      <img  class=\"img-thumbnail\"  src=\"../../TP_LAV4_2017/assets/imagenes/adivina.png\" alt=\"Avatar\" style=\"width:100%\">\r\n      <H4>Adivina el número</H4>\r\n    \r\n      <p>           <button class=\"btn2 blue\"  (click)=\"Juego('Adivina')\">Jugar</button></p>\r\n    </div>\r\n\r\n    <div class=\"card\">\r\n        <img class=\"img-thumbnail\" src=\"../../TP_LAV4_2017/assets/imagenes/ppt.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n        <H4>Piedra Papel o Tijera</H4>\r\n       \r\n        <p>           <button class=\"btn2 blue\"  (click)=\"Juego('PPT')\">Jugar</button></p>\r\n      </div>\r\n\r\n    <div class=\"card\">\r\n        <img  class=\"img-thumbnail\"  src=\"../../TP_LAV4_2017/assets/imagenes/Palabra.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n        <H4>Anagrama de Palabra</H4>\r\n      \r\n        <p>           <button class=\"btn2 blue\"  (click)=\"Juego('Anagrama')\">Jugar</button></p>\r\n      </div>\r\n \r\n      <div class=\"card\">\r\n          <img  class=\"img-thumbnail\"  src=\"../../TP_LAV4_2017/assets/imagenes/banderas.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n          <H4>Trivia de Banderas</H4>\r\n        \r\n          <p>           <button class=\"btn2 blue\"  (click)=\"Juego('Trivia')\">Jugar</button></p>\r\n        </div>\r\n  </div>\r\n\r\n-->"
 
 /***/ }),
 
@@ -2607,6 +2479,9 @@ var MenuCardComponent = (function () {
                 break;
             case 'PPT':
                 this.router.navigate(['/Juegos/PPTijeraMasListado']);
+                break;
+            case 'tateti':
+                this.router.navigate(['/Juegos/tateti']);
                 break;
         }
     };
@@ -3177,6 +3052,320 @@ RegistroComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/componentes/ta-te-ti/block.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Block; });
+var Block = (function () {
+    function Block() {
+        this.free = true;
+        this.value = ""; // cross | tick
+        this.symbol = ""; // cross | tick
+    }
+    Block.prototype.setValue = function (value) {
+        this.value = value;
+        if (this.value == "tick") {
+            this.symbol = "done";
+        }
+        else {
+            this.symbol = "close";
+        }
+    };
+    return Block;
+}());
+
+//# sourceMappingURL=block.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/ta-te-ti/game.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GameService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__player__ = __webpack_require__("../../../../../src/app/componentes/ta-te-ti/player.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__block__ = __webpack_require__("../../../../../src/app/componentes/ta-te-ti/block.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var GameService = (function () {
+    function GameService() {
+        this.players = [];
+        this.turn = 0; // By Default First Player turn is First
+        this.draw = 0;
+        this.blocks = [];
+        this.freeBlocksRemaining = 9;
+        this.initBlocks();
+        this.initPlayers();
+    }
+    GameService.prototype.initBlocks = function () {
+        this.blocks = [];
+        for (var i = 1; i <= 9; ++i) {
+            var block = new __WEBPACK_IMPORTED_MODULE_2__block__["a" /* Block */]();
+            block.free = true;
+            block.value = "";
+            block.symbol = "";
+            this.blocks.push(block);
+        }
+    };
+    GameService.prototype.initPlayers = function () {
+        // Player1
+        var player1 = new __WEBPACK_IMPORTED_MODULE_1__player__["a" /* Player */]();
+        player1.bot = false;
+        // Bot
+        var player2 = new __WEBPACK_IMPORTED_MODULE_1__player__["a" /* Player */]();
+        this.players.push(player1);
+        this.players.push(player2);
+    };
+    GameService.prototype.changeTurn = function () {
+        if (this.turn == 1) {
+            this.turn = 0;
+        }
+        else {
+            this.turn = 1;
+        }
+        return this.turn;
+    };
+    GameService.prototype.blockSetComplete = function () {
+        var block1 = this.blocks[0];
+        var block2 = this.blocks[1];
+        var block3 = this.blocks[2];
+        var block4 = this.blocks[3];
+        var block5 = this.blocks[4];
+        var block6 = this.blocks[5];
+        var block7 = this.blocks[6];
+        var block8 = this.blocks[7];
+        var block9 = this.blocks[8];
+        if ((block1.free == false && block2.free == false && block3.free == false && (block1.value == block2.value) && (block1.value == block3.value)) ||
+            (block1.free == false && block4.free == false && block7.free == false && (block1.value == block4.value) && (block1.value == block7.value)) ||
+            (block1.free == false && block5.free == false && block9.free == false && (block1.value == block5.value) && (block1.value == block9.value)) ||
+            (block2.free == false && block5.free == false && block8.free == false && (block2.value == block5.value) && (block2.value == block8.value)) ||
+            (block3.free == false && block6.free == false && block9.free == false && (block3.value == block6.value) && (block3.value == block9.value)) ||
+            (block3.free == false && block5.free == false && block7.free == false && (block3.value == block5.value) && (block3.value == block7.value)) ||
+            (block4.free == false && block5.free == false && block6.free == false && (block4.value == block5.value) && (block4.value == block6.value)) ||
+            (block7.free == false && block8.free == false && block9.free == false && (block7.value == block8.value) && (block7.value == block9.value))) {
+            return true;
+        }
+        return false;
+    };
+    GameService.prototype.figureBotMove = function () {
+        // Priortize by checking block that is completing
+        var bot_move = this.GetCompletingSet();
+        if (bot_move > 0) {
+            return bot_move;
+        }
+        // 2nd Priority Block enemy from completing Set
+        var bot_move = this.blockEnemyAttemptCompleteSet();
+        if (bot_move > 0) {
+            return bot_move;
+        }
+        return Math.floor(Math.random() * 8) + 1;
+    };
+    /*
+        Check if any Block Set is completing
+    */
+    GameService.prototype.GetCompletingSet = function () {
+        var block1 = this.blocks[0];
+        var block2 = this.blocks[1];
+        var block3 = this.blocks[2];
+        var block4 = this.blocks[3];
+        var block5 = this.blocks[4];
+        var block6 = this.blocks[5];
+        var block7 = this.blocks[6];
+        var block8 = this.blocks[7];
+        var block9 = this.blocks[8];
+        // Block#1
+        if (block1.free == false && block2.free == true && block3.free == false && (block1.value == 'cross' && block1.value == block3.value)) {
+            return 2;
+        }
+        else if (block1.free == false && block2.free == false && block3.free == true && (block1.value == 'cross' && block1.value == block2.value)) {
+            return 3;
+        }
+        else if (block1.free == false && block4.free == true && block7.free == false && (block1.value == 'cross' && block1.value == block7.value)) {
+            return 4;
+        }
+        else if (block1.free == false && block4.free == false && block7.free == true && (block1.value == 'cross' && block1.value == block4.value)) {
+            return 7;
+        }
+        else if (block1.free == false && block5.free == true && block9.free == false && (block1.value == 'cross' && block1.value == block9.value)) {
+            return 5;
+        }
+        else if (block1.free == false && block5.free == false && block9.free == true && (block1.value == 'cross' && block1.value == block5.value)) {
+            return 9;
+            // Block#2
+        }
+        else if (block2.free == false && block3.free == false && block1.free == true && (block2.value == 'cross' && block2.value == block3.value)) {
+            return 1;
+        }
+        else if (block2.free == false && block8.free == false && block5.free == true && (block2.value == 'cross' && block2.value == block8.value)) {
+            return 5;
+        }
+        else if (block2.free == false && block8.free == true && block5.free == false && (block2.value == 'cross' && block2.value == block5.value)) {
+            return 8;
+            // Block#3
+        }
+        else if (block3.free == false && block6.free == true && block9.free == false && (block3.value == 'cross' && block3.value == block9.value)) {
+            return 6;
+        }
+        else if (block3.free == false && block9.free == true && block6.free == false && (block3.value == 'cross' && block3.value == block6.value)) {
+            return 9;
+        }
+        else if (block3.free == false && block5.free == true && block7.free == false && (block3.value == 'cross' && block3.value == block7.value)) {
+            return 5;
+        }
+        else if (block3.free == false && block7.free == true && block5.free == false && (block3.value == 'cross' && block3.value == block5.value)) {
+            return 7;
+            // Block#4
+        }
+        else if (block4.free == false && block5.free == true && block6.free == false && (block4.value == 'cross' && block4.value == block6.value)) {
+            return 5;
+        }
+        else if (block4.free == false && block6.free == true && block5.free == false && (block4.value == 'cross' && block4.value == block5.value)) {
+            return 6;
+            // Block#5
+        }
+        else if (block5.free == false && block4.free == true && block6.free == false && (block5.value == 'cross' && block5.value == block6.value)) {
+            return 4;
+            // Block#7
+        }
+        else if (block7.free == false && block8.free == true && block9.free == false && (block7.value == 'cross' && block7.value == block9.value)) {
+            return 8;
+        }
+        else if (block7.free == false && block9.free == true && block8.free == false && (block7.value == 'cross' && block7.value == block8.value)) {
+            return 9;
+            // Block#8
+        }
+        else if (block8.free == false && block7.free == true && block9.free == false && (block8.value == 'cross' && block8.value == block9.value)) {
+            return 7;
+        }
+        else {
+            return 0;
+        }
+    };
+    /*
+        Block Enemy Attempt to Complete Set
+    */
+    GameService.prototype.blockEnemyAttemptCompleteSet = function () {
+        var block1 = this.blocks[0];
+        var block2 = this.blocks[1];
+        var block3 = this.blocks[2];
+        var block4 = this.blocks[3];
+        var block5 = this.blocks[4];
+        var block6 = this.blocks[5];
+        var block7 = this.blocks[6];
+        var block8 = this.blocks[7];
+        var block9 = this.blocks[8];
+        // Block#1
+        if (block1.free == false && block2.free == true && block3.free == false && (block1.value == block3.value)) {
+            return 2;
+        }
+        else if (block1.free == false && block2.free == false && block3.free == true && (block1.value == block2.value)) {
+            return 3;
+        }
+        else if (block1.free == false && block4.free == true && block7.free == false && (block1.value == block7.value)) {
+            return 4;
+        }
+        else if (block1.free == false && block4.free == false && block7.free == true && (block1.value == block4.value)) {
+            return 7;
+        }
+        else if (block1.free == false && block5.free == true && block9.free == false && (block1.value == block9.value)) {
+            return 5;
+        }
+        else if (block1.free == false && block5.free == false && block9.free == true && (block1.value == block5.value)) {
+            return 9;
+            // Block#2
+        }
+        else if (block2.free == false && block3.free == false && block1.free == true && (block2.value == block3.value)) {
+            return 1;
+        }
+        else if (block2.free == false && block8.free == false && block5.free == true && (block2.value == block8.value)) {
+            return 5;
+        }
+        else if (block2.free == false && block8.free == true && block5.free == false && (block2.value == block5.value)) {
+            return 8;
+            // Block#3
+        }
+        else if (block3.free == false && block6.free == true && block9.free == false && (block3.value == block9.value)) {
+            return 6;
+        }
+        else if (block3.free == false && block9.free == true && block6.free == false && (block3.value == block6.value)) {
+            return 9;
+        }
+        else if (block3.free == false && block5.free == true && block7.free == false && (block3.value == block7.value)) {
+            return 5;
+        }
+        else if (block3.free == false && block7.free == true && block5.free == false && (block3.value == block5.value)) {
+            return 7;
+            // Block#4
+        }
+        else if (block4.free == false && block5.free == true && block6.free == false && (block4.value == block6.value)) {
+            return 5;
+        }
+        else if (block4.free == false && block6.free == true && block5.free == false && (block4.value == block5.value)) {
+            return 6;
+            // Block#5
+        }
+        else if (block5.free == false && block4.free == true && block6.free == false && (block5.value == block6.value)) {
+            return 4;
+            // Block#7
+        }
+        else if (block7.free == false && block8.free == true && block9.free == false && (block7.value == block9.value)) {
+            return 8;
+        }
+        else if (block7.free == false && block9.free == true && block8.free == false && (block7.value == block8.value)) {
+            return 9;
+            // Block#8
+        }
+        else if (block8.free == false && block7.free == true && block9.free == false && (block8.value == block9.value)) {
+            return 7;
+        }
+        else {
+            return 0;
+        }
+    };
+    return GameService;
+}());
+GameService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+    __metadata("design:paramtypes", [])
+], GameService);
+
+//# sourceMappingURL=game.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/ta-te-ti/player.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Player; });
+var Player = (function () {
+    function Player() {
+        this.bot = true;
+        this.score = 0;
+    }
+    Player.prototype.updateScore = function (total) {
+        this.score += total;
+        return this.score;
+    };
+    return Player;
+}());
+
+//# sourceMappingURL=player.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/componentes/ta-te-ti/ta-te-ti.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3185,7 +3374,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".game-area {\r\n    margin-top: 25px;\r\n\twidth: 450px;\r\n}\r\n.tick-tack-grid {\r\n    cursor: pointer;\r\n    background-color: white;\r\n}\r\n\r\n        \r\n.mat-grid-tile:nth-child(2), :nth-child(5), :nth-child(8){\r\n    border-left: 1px solid #ccc;\r\n    border-right: 1px solid #ccc;\r\n}\r\n\r\n.mat-grid-tile:nth-child(4), :nth-child(5), :nth-child(6) {\r\n    border-top: 1px solid #ccc;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n\r\ni.material-icons.tick {\r\n    color: green;\r\n}\r\n\r\ni.material-icons.cross {\r\n    color: red;\r\n}\r\n\t\t\r\n\t\r\n\r\n", ""]);
 
 // exports
 
@@ -3198,7 +3387,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/componentes/ta-te-ti/ta-te-ti.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--<p>\n  ta-te-ti works!\n</p>-->\n<div class=\"box is-red\">\n  <div class=\"columns\">\n    <div class=\"column is-1\">\n      <span class=\"icon is-large\">\n        <img src=\"./assets/imagenes/tic-tac-toe.svg\">\n      </span>\n    </div>\n    <div class=\"column has-text-centered\">\n      <h2>Tic Tac Toe</h2>\n    </div>\n    <div class=\"column is-1\">\n    </div>\n  </div>\n\n  <div *ngIf=\"nuevoJuego.gano==null\" class=\"is-absolute\">\n    <h2><button (click)=\"start()\" class=\"button is-info is-large\">Start</button></h2>\n  </div>\n  <div *ngIf=\"nuevoJuego.gano!=null\" class=\"is-absolute\">\n      <h2>Nivel {{nuevoJuego.nivel}}</h2>\n    </div>\n\n  <form name=\"juego\" class=\"is-centered\">\n\n    <table id=\"board\">\n      <tr>\n        <td (click)=\"play('1')\">\n          <img *ngIf=\"nuevoJuego.spot1!==''\" class=\"img-game\" src=\"./assets/imagenes/{{nuevoJuego.spot1}}.svg\" alt=\"\">\n        </td>\n        <td (click)=\"play('2')\">\n          <img *ngIf=\"nuevoJuego.spot2!==''\" class=\"img-game\" src=\"./assets/imagenes/{{nuevoJuego.spot2}}.svg\" alt=\"\">\n        </td>\n        <td (click)=\"play('3')\">\n          <img *ngIf=\"nuevoJuego.spot3!==''\" class=\"img-game\" src=\"./assets/imagenes/{{nuevoJuego.spot3}}.svg\" alt=\"\">\n        </td>\n      </tr>\n      <tr>\n        <td (click)=\"play('4')\">\n          <img *ngIf=\"nuevoJuego.spot4!==''\" class=\"img-game\" src=\"./assets/imagenes/{{nuevoJuego.spot4}}.svg\" alt=\"\">\n        </td>\n        <td (click)=\"play('5')\">\n          <img *ngIf=\"nuevoJuego.spot5!==''\" class=\"img-game\" src=\"./assets/imagenes/{{nuevoJuego.spot5}}.svg\" alt=\"\">\n        </td>\n        <td (click)=\"play('6')\">\n          <img *ngIf=\"nuevoJuego.spot6!==''\" class=\"img-game\" src=\"./assets/imagenes/{{nuevoJuego.spot6}}.svg\" alt=\"\">\n        </td>\n      </tr>\n      <tr>\n        <td (click)=\"play('7')\">\n          <img *ngIf=\"nuevoJuego.spot7!==''\" class=\"img-game\" src=\"./assets/imagenes/{{nuevoJuego.spot7}}.svg\" alt=\"\">\n        </td>\n        <td (click)=\"play('8')\">\n          <img *ngIf=\"nuevoJuego.spot8!==''\" class=\"img-game\" src=\"./assets/imagenes/{{nuevoJuego.spot8}}.svg\" alt=\"\">\n        </td>\n        <td (click)=\"play('9')\">\n          <img *ngIf=\"nuevoJuego.spot9!==''\" class=\"img-game\" src=\"./assets/imagenes/{{nuevoJuego.spot9}}.svg\" alt=\"\">\n        </td>\n      </tr>\n    </table>\n\n    <div *ngIf=\"isEnd&&!nuevoJuego.gano\" class=\"modal is-centered\">\n      <img src=\"./assets/imagenes/looser.svg\" alt=\"\" (click)=\"closeModal()\">\n    </div>\n    <div *ngIf=\"isEnd&&nuevoJuego.gano\" class=\"modal is-centered\">\n      <img src=\"./assets/imagenes/winner.svg\" alt=\"\" (click)=\"closeModal()\">\n    </div>\n  </form>\n\n</div>\n<img *ngIf=\"thinking\" class=\"thinking\" src=\"./assets/thinking.gif\" alt=\"\">"
+module.exports = "<div class=\"container\">\r\n\r\n  <div class=\"row\">\r\n  \r\n    <div class=\"col-md-8\">\r\n      <div class=\"game-area\">\r\n        <mat-grid-list class=\"tick-tack-grid\" cols=\"3\">\r\n          <mat-grid-tile *ngFor=\"let block of gs.blocks; let i = index; trackBy: trackByFn\" (click)=\"playerClick(i)\"><i [class]=\"block.symbol == 'done' ? 'material-icons tick' : 'material-icons cross'\">{{ block.symbol }}</i></mat-grid-tile>\r\n        </mat-grid-list>\r\n      </div>\r\n    </div>\r\n  \r\n    <div class=\"col-md-4\">\r\n      <h2>Resultados:</h2>\r\n      <table class=\"table table-bordered\">\r\n        <tbody>\r\n          <tr>\r\n            <td>Ganaste:</td>\r\n            <td>{{ gs.players[0].score }}</td>\r\n          </tr>\r\n  \r\n          <tr>\r\n            <td>Computadora:</td>\r\n            <td>{{ gs.players[1].score }}</td>\r\n          </tr>\r\n  \r\n          <tr>\r\n            <td>Empate:</td>\r\n            <td>{{ gs.draw }}</td>\r\n          </tr>\r\n  \r\n        </tbody>\r\n      </table>\r\n      <a class=\"pull-right text-right\" class=\"btn btn-danger\" (click)=\"resetGame($event)\" href=\"#\">Resetear juego</a>\r\n      <a class=\"pull-right text-right\" class=\"btn btn-danger\" (click)=\"newGame($event)\" href=\"#\">Nuevo juego</a>\r\n    </div>\r\n  \r\n  </div>\r\n    \r\n  \r\n  </div>\r\n  "
 
 /***/ }),
 
@@ -3208,8 +3397,9 @@ module.exports = "<!--<p>\n  ta-te-ti works!\n</p>-->\n<div class=\"box is-red\"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TaTeTiComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__clases_juego_tateti__ = __webpack_require__("../../../../../src/app/clases/juego-tateti.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__servicios_juego_service_service__ = __webpack_require__("../../../../../src/app/servicios/juego-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__game_service__ = __webpack_require__("../../../../../src/app/componentes/ta-te-ti/game.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3219,117 +3409,81 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/*import { Component, OnInit } from '@angular/core';
 
-@Component({
-  selector: 'app-ta-te-ti',
-  templateUrl: './ta-te-ti.component.html',
-  styleUrls: ['./ta-te-ti.component.css']
-})
-export class TaTeTiComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
-*/
 
 
 
 var TaTeTiComponent = (function () {
-    function TaTeTiComponent(juegoService) {
-        this.isEnd = false;
-        this.thinking = false;
-        this.nuevoJuego = new __WEBPACK_IMPORTED_MODULE_1__clases_juego_tateti__["a" /* JuegoTaTeTi */]();
-        this.juegoService = juegoService;
+    function TaTeTiComponent(gs, snackBar, router) {
+        this.gs = gs;
+        this.snackBar = snackBar;
+        this.router = router;
+        this.lock = false;
     }
-    TaTeTiComponent.prototype.play = function (position) {
-        if (!this.isEnd && this.nuevoJuego.gano != null && !this.thinking) {
-            var moveDone = false;
-            if (position == '1' && this.nuevoJuego.spot1 == '') {
-                this.nuevoJuego.spot1 = 'cross';
-                moveDone = true;
-            }
-            else if (position == '2' && this.nuevoJuego.spot2 == '') {
-                this.nuevoJuego.spot2 = 'cross';
-                moveDone = true;
-            }
-            else if (position == '3' && this.nuevoJuego.spot3 == '') {
-                this.nuevoJuego.spot3 = 'cross';
-                moveDone = true;
-            }
-            else if (position == '4' && this.nuevoJuego.spot4 == '') {
-                this.nuevoJuego.spot4 = 'cross';
-                moveDone = true;
-            }
-            else if (position == '5' && this.nuevoJuego.spot5 == '') {
-                this.nuevoJuego.spot5 = 'cross';
-                moveDone = true;
-            }
-            else if (position == '6' && this.nuevoJuego.spot6 == '') {
-                this.nuevoJuego.spot6 = 'cross';
-                moveDone = true;
-            }
-            else if (position == '7' && this.nuevoJuego.spot7 == '') {
-                this.nuevoJuego.spot7 = 'cross';
-                moveDone = true;
-            }
-            else if (position == '8' && this.nuevoJuego.spot8 == '') {
-                this.nuevoJuego.spot8 = 'cross';
-                moveDone = true;
-            }
-            else if (position == '9' && this.nuevoJuego.spot9 == '') {
-                this.nuevoJuego.spot9 = 'cross';
-                moveDone = true;
-            }
-            if (moveDone) {
-                this.verificar();
-                if (!this.isEnd) {
-                    this.thinking = true;
-                    var that_1 = this;
-                    var time = Math.floor((Math.random() * 1000) + 100);
-                    setTimeout(function () {
-                        that_1.thinking = false;
-                        that_1.nuevoJuego.botPlays();
-                        that_1.verificar();
-                    }, time);
-                }
-            }
+    TaTeTiComponent.prototype.newGame = function () {
+        this.gs.freeBlocksRemaining = 9;
+        this.gs.initBlocks();
+        this.lock = false;
+        this.gs.turn = 0;
+    };
+    TaTeTiComponent.prototype.resetGame = function (event) {
+        event.preventDefault();
+        location.reload();
+    };
+    TaTeTiComponent.prototype.playerClick = function (i) {
+        if (this.gs.blocks[i].free == false || this.lock == true) {
+            return;
+        }
+        this.gs.freeBlocksRemaining -= 1; // Reduce no. of free blocks after each selection
+        if (this.gs.freeBlocksRemaining <= 0) {
+            this.gs.draw += 1;
+            this.lock = true;
+            this.snackBar.open("Juego:", "Empate", {
+                duration: 4000,
+            });
+            this.newGame();
+            return;
+        }
+        this.gs.blocks[i].free = false;
+        if (this.gs.turn == 0) {
+            this.gs.blocks[i].setValue("tick");
+        }
+        else {
+            this.gs.blocks[i].setValue("cross");
+        }
+        var complete = this.gs.blockSetComplete();
+        if (complete == false) {
+            this.changeTurn();
+            return;
+        }
+        else {
+            this.lock = true;
+            this.gs.players[this.gs.turn].score += 1;
+            this.snackBar.open("Ganador:", "Jugador " + (this.gs.turn + 1), {
+                duration: 4000,
+            });
+            this.newGame();
+            return;
         }
     };
-    TaTeTiComponent.prototype.verificar = function () {
-        this.isEnd = this.nuevoJuego.verificar();
-        if (this.isEnd) {
-            if (!this.nuevoJuego.gano) {
-                if (this.nuevoJuego.nivel > 1) {
-                    this.register();
-                }
-                this.nuevoJuego.nivel = 1;
-            }
-            else {
-                this.nuevoJuego.nivel++;
-            }
+    TaTeTiComponent.prototype.botTurn = function () {
+        if (this.gs.freeBlocksRemaining <= 0) {
+            return;
+        }
+        var bot_selected = this.gs.figureBotMove() - 1;
+        if (this.gs.blocks[bot_selected].free == true) {
+            this.playerClick(bot_selected);
+        }
+        else {
+            this.botTurn();
+            return;
         }
     };
-    TaTeTiComponent.prototype.start = function () {
-        this.nuevoJuego.reset();
-    };
-    TaTeTiComponent.prototype.ngOnInit = function () {
-    };
-    TaTeTiComponent.prototype.closeModal = function () {
-        this.isEnd = false;
-        this.nuevoJuego.gano = null;
-    };
-    TaTeTiComponent.prototype.register = function () {
-        var objeto = {
-            juego: 'TicTacToe',
-            nivel: this.nuevoJuego.nivel,
-            tiempo: 0
-        };
-        //this.juegoService.
-        //this.juegoService.cargar(objeto);
+    TaTeTiComponent.prototype.changeTurn = function () {
+        var player = this.gs.changeTurn();
+        if (player == 1) {
+            this.botTurn();
+        }
     };
     return TaTeTiComponent;
 }());
@@ -3337,12 +3491,13 @@ TaTeTiComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-ta-te-ti',
         template: __webpack_require__("../../../../../src/app/componentes/ta-te-ti/ta-te-ti.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/componentes/ta-te-ti/ta-te-ti.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/componentes/ta-te-ti/ta-te-ti.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_3__game_service__["a" /* GameService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__servicios_juego_service_service__["a" /* JuegoServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__servicios_juego_service_service__["a" /* JuegoServiceService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__game_service__["a" /* GameService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__game_service__["a" /* GameService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MatSnackBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_material__["b" /* MatSnackBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _c || Object])
 ], TaTeTiComponent);
 
-var _a;
+var _a, _b, _c;
 //# sourceMappingURL=ta-te-ti.component.js.map
 
 /***/ }),
@@ -3408,6 +3563,7 @@ SexoPipe = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__componentes_agilidad_aritmetica_agilidad_aritmetica_component__ = __webpack_require__("../../../../../src/app/componentes/agilidad-aritmetica/agilidad-aritmetica.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__componentes_agilidad_mas_listado_agilidad_mas_listado_component__ = __webpack_require__("../../../../../src/app/componentes/agilidad-mas-listado/agilidad-mas-listado.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__componentes_anagrama_mas_listado_anagrama_mas_listado_component__ = __webpack_require__("../../../../../src/app/componentes/anagrama-mas-listado/anagrama-mas-listado.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__componentes_ta_te_ti_ta_te_ti_component__ = __webpack_require__("../../../../../src/app/componentes/ta-te-ti/ta-te-ti.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3436,6 +3592,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 // declaro donde quiero que se dirija
 var MiRuteo = [
     { path: 'Jugadores', component: __WEBPACK_IMPORTED_MODULE_12__componentes_jugadores_listado_jugadores_listado_component__["a" /* JugadoresListadoComponent */] },
@@ -3456,7 +3613,8 @@ var MiRuteo = [
             { path: 'AgilidadaMasListado', component: __WEBPACK_IMPORTED_MODULE_18__componentes_agilidad_mas_listado_agilidad_mas_listado_component__["a" /* AgilidadMasListadoComponent */] },
             { path: 'Anagrama', component: __WEBPACK_IMPORTED_MODULE_15__componentes_anagrama_anagrama_component__["a" /* AnagramaComponent */] },
             { path: 'AnagramaMasListado', component: __WEBPACK_IMPORTED_MODULE_19__componentes_anagrama_mas_listado_anagrama_mas_listado_component__["a" /* AnagramaMasListadoComponent */] },
-            { path: 'PPTijeraMasListado', component: __WEBPACK_IMPORTED_MODULE_16__componentes_pptijera_mas_listado_pptijera_mas_listado_component__["a" /* PPTijeraMasListadoComponent */] }]
+            { path: 'PPTijeraMasListado', component: __WEBPACK_IMPORTED_MODULE_16__componentes_pptijera_mas_listado_pptijera_mas_listado_component__["a" /* PPTijeraMasListadoComponent */] },
+            { path: 'tateti', component: __WEBPACK_IMPORTED_MODULE_20__componentes_ta_te_ti_ta_te_ti_component__["a" /* TaTeTiComponent */] }]
     },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_3__componentes_error_error_component__["a" /* ErrorComponent */] },
     { path: 'error', component: __WEBPACK_IMPORTED_MODULE_3__componentes_error_error_component__["a" /* ErrorComponent */] }
