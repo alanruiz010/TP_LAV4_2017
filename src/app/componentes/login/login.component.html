@@ -21,11 +21,13 @@
     </div>
   </div>
 </div-->
+<!--
+<div class="panel panel-default">
  <div class="container" >
   <div class="jumbotron" style="padding:50px;">
     <form action="return true;">
       <div class="imgcontainer">
-        <img src="../../../assets/imagenes/registro.jpg" alt="Avatar" class="avatar" max-width="104" >
+        <img src="../../../assets/imagenes/login_here.jpg" alt="Avatar" class="avatar" max-width="104" >
       </div>
 
       <div class="container">
@@ -55,7 +57,13 @@
     </form>
   </div>
 </div>
-<!--
+</div>
+-->
+
+
+<html>
+
+<body style="background-color:lightseagreen;" class="fondo"  >
 
   <br><br><br><br><br><br>
 
@@ -64,10 +72,10 @@
       <h2></h2>
             
       <div class="imgcontainer">
-          <img src="../../TP_LAV4_2017/assets/imagenes/login.gif" alt="Avatar" class="avatar" max-width="104" >
+          <img src="../../../assets/imagenes/login_here.jpg" alt="Avatar" class="avatar" max-width="104" >
         </div>
-
-        <label><b>Usuario</b></label>
+<!--"../../TP_LAV4_2017/assets/imagenes/login.gif"-->
+       <label><b>Usuario</b></label>
         <input type="text" placeholder="Usuario"  [(ngModel)]="usuario"  name="uname" required>
 <h5></h5>
         <label><b>Clave</b></label>
@@ -83,8 +91,8 @@
        
         
         <h2></h2>
-        <button class="btn2" *ngIf="logeando"  (click)="MoverBarraDeProgreso()" >Ingresar</button>
-        <button class="btn2 red" routerLink="/Registro" >Registrarse</button>
+        <button class="button button5" *ngIf="logeando"  (click)="MoverBarraDeProgreso()" >Ingresar</button>
+        <button class="button button5" routerLink="/Registro" >Registrarse</button>
         <H2></H2>
       </div>
 
@@ -95,4 +103,6 @@
       <h3></h3>
   
 </form>
--->
+
+</body>
+</html>

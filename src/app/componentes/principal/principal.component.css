@@ -20,7 +20,45 @@ height: 70px;
     background-size: cover;
     position: relative;
 }
+/*===============================================*/
+.fondo{
+    background: url("../../../assets/imagenes/comet-home.gif"); 
+    height: 600px;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    }
 
+    .container .btn {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: grey;
+        color: black;
+        font-size: 16px;
+        padding: 16px 30px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .container .btn:hover {
+        background-color: black;
+        color: grey;
+    }
+    .container .btn2:hover {
+        background-color: black;
+        color: grey;
+    }
+
+
+
+    /*===============================================*/
 form {
     
     width: 100%;

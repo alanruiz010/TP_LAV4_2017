@@ -57,6 +57,9 @@ export class LoginComponent implements OnInit {
       this.miServicio.CargarUsuario(this.usuario);
       this.router.navigate(['/Principal']);
     }
+    else {
+      this.router.navigate([' ']);
+    }
   }
   
   MoverBarraDeProgreso() {
