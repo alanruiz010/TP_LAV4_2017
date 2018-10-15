@@ -3,15 +3,47 @@
    
     }
 body {
-    font: 20px Montserrat, sans-serif;
-    line-height: 1.8;
-    color: #f5f6f7;
+  /*  font: 20px Montserrat, sans-serif;
+   line-height: 1.8;
+   color: #f5f6f7;*/
+    
 }
+.fondo{
+
+    background:url("../../../assets/imagenes/comet-home.gif"); /*url("../../../assets/imagenes/comet-home.gif"); */
+    height: 600px;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+.pata     {
+    font: oblique bold 120% cursive;
+  }
+  .pata2 {
+    font: small-caps 100%/200% serif;
+  }
 p {font-size: 16px;}
 .margin {margin-bottom: 45px;}
 .bg-1 { 
-    background-color: #1abc9c; /* Green */
-    color: #ffffff;
+    background:url("../../../assets/imagenes/supernova-kepler.gif"); /*url("../../../assets/imagenes/comet-home.gif"); */
+    height: 600px;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    
 }
 .bg-2 { 
     background-color: #474e5d; /* Dark Blue */
@@ -37,6 +69,8 @@ p {font-size: 16px;}
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
+
+    
 }
 .navbar-nav  li a:hover {
     color: #1abc9c !important;

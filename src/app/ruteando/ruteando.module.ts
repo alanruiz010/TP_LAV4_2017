@@ -59,6 +59,7 @@ children:
       {path: 'tateti' , component: TaTeTiComponent}]
 },
 {path: '**' , component: ErrorComponent},
+{path: '#' , component: LoginComponent},
 {path: 'error' , component: ErrorComponent}];
 
 @NgModule({

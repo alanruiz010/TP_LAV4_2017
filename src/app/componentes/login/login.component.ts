@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/Principal']);
     }
     else {
-      this.router.navigate([' ']);
+      this.router.navigate(['#']);
     }
   }
   

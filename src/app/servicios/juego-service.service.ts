@@ -14,7 +14,7 @@ export class JuegoServiceService {
   UsuarioLogueado:string;
   peticion:any;
 
-  constructor( public miHttp: MiHttpService , private route: Router) {
+  constructor( private miHttp: MiHttpService , private route: Router) {
     this.miRoute = route;
     this.peticion = this.miHttp.httpGetO("http://localhost:4200");
     this.myArrayServicio = new Array<Juego>();
@@ -22,6 +22,7 @@ export class JuegoServiceService {
      //3003
 //    this.peticion = this.miHttp.httpGetO("https://restcountries.eu/rest/v2/all");
   }
+  
 
   //constructor(private miServicio : MiHttpService) { 
    // this.myArrayServicio = new Array<Juego>();

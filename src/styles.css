@@ -1,2 +1,123 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+/* You can add global styles to this file, and also import other style files */
+h2{
+    font-family: 'Press Start 2P',cursive; 
+    color: white;
+}
+
+.btn2 {
+    position: relative;
+  
+    font-family: 'Press Start 2P',cursive;
+    font-size: 13px;
+   
+    overflow: hidden;
+  
+    
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(131, 255, 148, 0.6);
+    
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    
+    transition: background-color .3s;
+  }
+  
+  .btn2:hover, .btn2:focus {
+    background-color: #0A813C;
+  }
+  
+  .btn2 > * {
+    position: relative;
+  }
+  
+  .btn2 span {
+    display: block;
+    padding: 12px 24px;
+  }
+  
+  .btn2:before {
+    content: "";
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    display: block;
+    width: 0;
+    padding-top: 0;
+      
+    border-radius: 100%;
+    
+    background-color: rgba(209, 209, 209, 0.3);
+    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
+  .btn2:active:before {
+    width: 120%;
+    padding-top: 120%;
+    
+    transition: width .2s ease-out, padding-top .2s ease-out;
+  }
+  
+  /* Styles, not important */
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  
+  
+  
+  
+  .btn2.orange {
+    background-color: #e67e22;
+    
+    box-shadow: 0 3px 6px rgba(255, 111, 28, 0.6);
+  }
+  
+  .btn2.orange:hover, .btn2.orange:focus {
+    background-color: #B34501;
+    
+    box-shadow: 0 3px 6px rgba(255, 199, 134, 0.6);
+  }
+  
+  .btn2.red {
+    background-color: #e74c3c;
+    box-shadow: 0 3px 6px rgba(255, 28, 28, 0.6);
+  }
+  
+  .btn2.red:hover, .btn2.red:focus {
+    background-color: #A11C0F;
+    box-shadow: 0 3px 6px rgba(255, 134, 134, 0.6);
+  }
+  
+  .btn2.blue {
+    background-color: #3C8CE7;
+    box-shadow: 0 3px 6px rgba(28, 89, 255, 0.6);
+  }
+  
+  .btn2.blue:hover, .btn2.blue:focus {
+    background-color: #2B3AC0;
+    
+    box-shadow: 0 3px 6px rgba(134, 182, 255, 0.6);
+  }
+  
+  .btn2.purple {
+    background-color: #901DC5;
+    box-shadow: 0 3px 6px rgba(217, 28, 255, 0.6);
+  }
+  
+  .btn2.purple:hover, .btn2.purple:focus {
+    background-color: #4D046E;
+    box-shadow: 0 3px 6px rgba(207, 134, 255, 0.6);
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
