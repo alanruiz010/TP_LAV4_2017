@@ -2,6 +2,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 /* You can add global styles to this file, and also import other style files */
 h2{
     font-family: 'Press Start 2P',cursive; 
@@ -119,5 +120,3 @@ h2{
     background-color: #4D046E;
     box-shadow: 0 3px 6px rgba(207, 134, 255, 0.6);
   }
-
-  @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');

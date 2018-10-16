@@ -40,9 +40,9 @@
         <label>ingrese numero:  </label>  <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:20%"/>
       
           <h2 [hidden]="ocultarVerificar"><button  *ngIf="nuevoJuego.numeroSecreto!=0" (click)="verificar()" class="btn2">Verificar</button></h2>
-      
+          <h3></h3>
           <h2><button *ngIf="nuevoJuego.numeroSecreto==0 " (click)="generarnumero()"  class="btn2 orange">Nuevo número secreto</button></h2>
-      
+          <h3></h3>
           <h2><p *ngIf="nuevoJuego.numeroSecreto!=0" ></p></h2>
 
           
