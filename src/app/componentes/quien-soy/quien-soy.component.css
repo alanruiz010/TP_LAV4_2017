@@ -23,9 +23,11 @@ img.avatar {
     border-radius: 50%;
 }
 .imgcontainer {
+
     text-align: center;
     margin: 24px 0 12px 0;
 }
+
 .pata     {
     font: oblique bold 120% cursive;
   }
