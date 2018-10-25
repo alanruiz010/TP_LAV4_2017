@@ -103,7 +103,8 @@
     </div>
   </nav>-->
 
-  <div id='cssmenu'>  
+  <div id='cssmenu'> 
+      <h3 class="margin">Hola</h3> 
       <ul>
        
         <li class='active '><a routerLink="/Principal">Inicio</a></li>
@@ -123,13 +124,26 @@
           </ul>
         </li>
         
-        <li class='active' ><a routerLink="/QuienSoy" >Mis Datos</a></li>
+        <li class='active'><a  routerLink="/QuienSoy" >Mis Datos</a></li>
         <li class='active'><a href='index.html'>Salir</a></li>
        
           
       </ul>
-    </div> 
 
+
+    </div> 
+    
+    <p>
+        Tamaño del lado {{lado}}
+      
+      </p>
+      <p>
+        1 way binding <input type="number" [ngModel]="lado">
+      </p>
+      <p>
+          1 way binding <input type="number" [(ngModel)]="lado">
+        </p>
+   
 
 
     

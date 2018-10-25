@@ -1,0 +1,29 @@
+<div style="text-align:center ;font-family: 'Press Start 2P',cursive;color: white; ">
+  <h2>
+   Trivia Paices
+  </h2>
+ </div>
+<form name="juego" style="font-family: 'Press Start 2P',cursive; font-size: 10px">
+  <div class="centro">  
+      
+      <br>
+      <table border="0" width="60%" height="auto" align="center">
+          <tr>
+              <td><img class="img-thumbnail" src="../../../assets/imagenes/{{Bandera}}.jpg" alt="Avatar" style="width:50%"></td>
+             <!-- <td><img class="img-thumbnail" src="../../TP_LAV4_2017/assets/imagenes/{{Bandera}}.jpg" alt="Avatar" style="width:50%"></td>-->
+            
+          </tr>
+        
+          <tr><button *ngIf="!BloquearBotones" class="btn2 blue" (click)="Opcion1()">{{nuevoJuego.opcion1}}</button></tr>
+          <tr><button *ngIf="!BloquearBotones" class="btn2 blue" (click)="Opcion2()">{{nuevoJuego.opcion2}}</button></tr>
+          <tr><button *ngIf="!BloquearBotones" class="btn2 blue" (click)="Opcion3()">{{nuevoJuego.opcion3}}</button></tr>
+          <tr><button *ngIf="!BloquearBotones" class="btn2 blue" (click)="Opcion4()">{{nuevoJuego.opcion4}}</button></tr>
+       
+      </table>
+      <br><br>
+      <button class="btn2 purple" (click)="GenerarPregunta()">Generar</button>
+      <br><br>
+    </div>
+  </form>
+
+<div id="snackbar">{{Mensajes}}</div> 

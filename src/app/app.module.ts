@@ -68,6 +68,8 @@ import { TaTeTiComponent } from './componentes/ta-te-ti/ta-te-ti.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {  MatSnackBarModule, MatGridListModule} from '@angular/material';
+import { TriviaPaicesComponent } from './componentes/trivia-paices/trivia-paices.component';
+import { TriviaPaicesMasListadoComponent } from './componentes/trivia-paices-mas-listado/trivia-paices-mas-listado.component';
 
 @NgModule({
   declarations: [
@@ -97,7 +99,9 @@ import {  MatSnackBarModule, MatGridListModule} from '@angular/material';
     PPTijeraComponent,
     PPTijeraMasListadoComponent,
     AnagramaMasListadoComponent,
-    TaTeTiComponent
+    TaTeTiComponent,
+    TriviaPaicesComponent,
+    TriviaPaicesMasListadoComponent
   ],
   imports: [
     BrowserModule,

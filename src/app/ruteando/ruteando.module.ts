@@ -32,6 +32,9 @@ import { AgilidadAritmeticaComponent } from '../componentes/agilidad-aritmetica/
 import { AgilidadMasListadoComponent } from '../componentes/agilidad-mas-listado/agilidad-mas-listado.component';
 import { AnagramaMasListadoComponent } from '../componentes/anagrama-mas-listado/anagrama-mas-listado.component';
 import { TaTeTiComponent } from '../componentes/ta-te-ti/ta-te-ti.component';
+import { TriviaPaicesComponent } from '../componentes/trivia-paices/trivia-paices.component';
+import { TriviaPaicesMasListadoComponent } from '../componentes/trivia-paices-mas-listado/trivia-paices-mas-listado.component';
+
 
 // declaro donde quiero que se dirija
 const MiRuteo = [
@@ -56,6 +59,7 @@ children:
       {path: 'Anagrama' , component: AnagramaComponent},
       {path: 'AnagramaMasListado' , component: AnagramaMasListadoComponent},
       {path: 'PPTijeraMasListado' , component: PPTijeraMasListadoComponent},
+      {path: 'Trivia' , component: TriviaPaicesMasListadoComponent},
       {path: 'tateti' , component: TaTeTiComponent}]
 },
 {path: '**' , component: ErrorComponent},

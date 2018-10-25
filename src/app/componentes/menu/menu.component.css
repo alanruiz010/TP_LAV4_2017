@@ -6,6 +6,12 @@
   margin: 0;
   border: 0;
 }
+.margin 
+{
+  float: right;
+ 
+
+}
 
 #cssmenu ul,
 #cssmenu li {

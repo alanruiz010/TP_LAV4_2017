@@ -112,6 +112,8 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__componentes_ta_te_ti_ta_te_ti_component__ = __webpack_require__("../../../../../src/app/componentes/ta-te-ti/ta-te-ti.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__componentes_trivia_paices_trivia_paices_component__ = __webpack_require__("../../../../../src/app/componentes/trivia-paices/trivia-paices.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__componentes_trivia_paices_mas_listado_trivia_paices_mas_listado_component__ = __webpack_require__("../../../../../src/app/componentes/trivia-paices-mas-listado/trivia-paices-mas-listado.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -172,6 +174,8 @@ const MiRuteo = [{path: 'error' , component: ErrorComponent},
 
 
 
+
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -206,7 +210,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_33__componentes_pptijera_pptijera_component__["a" /* PPTijeraComponent */],
             __WEBPACK_IMPORTED_MODULE_34__componentes_pptijera_mas_listado_pptijera_mas_listado_component__["a" /* PPTijeraMasListadoComponent */],
             __WEBPACK_IMPORTED_MODULE_35__componentes_anagrama_mas_listado_anagrama_mas_listado_component__["a" /* AnagramaMasListadoComponent */],
-            __WEBPACK_IMPORTED_MODULE_36__componentes_ta_te_ti_ta_te_ti_component__["a" /* TaTeTiComponent */]
+            __WEBPACK_IMPORTED_MODULE_36__componentes_ta_te_ti_ta_te_ti_component__["a" /* TaTeTiComponent */],
+            __WEBPACK_IMPORTED_MODULE_39__componentes_trivia_paices_trivia_paices_component__["a" /* TriviaPaicesComponent */],
+            __WEBPACK_IMPORTED_MODULE_40__componentes_trivia_paices_mas_listado_trivia_paices_mas_listado_component__["a" /* TriviaPaicesMasListadoComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -386,6 +392,52 @@ var JuegoAnagrama = (function (_super) {
 }(__WEBPACK_IMPORTED_MODULE_0__clases_juego__["a" /* Juego */]));
 
 //# sourceMappingURL=juego-anagrama.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/clases/juego-paices.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JuegoPaices; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__clases_juego__ = __webpack_require__("../../../../../src/app/clases/juego.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+/**
+ * Juego adivina el Numero
+ * la amquina genera un numero secreto ramdom entre 0 y 100.
+ * El jugador debe adivinar el numero.
+ * la maquina le informa si el numero ingresado es mayor o menor al numero secreto.
+ */
+var JuegoPaices = (function (_super) {
+    __extends(JuegoPaices, _super);
+    function JuegoPaices(nombre, gano, jugador) {
+        return _super.call(this, nombre, gano, jugador) || this;
+    }
+    JuegoPaices.prototype.verificar = function () {
+        if (this.respuestaJugador == this.respuestaVerdadera) {
+            this.gano = true;
+        }
+        if (this.gano) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    return JuegoPaices;
+}(__WEBPACK_IMPORTED_MODULE_0__clases_juego__["a" /* Juego */]));
+
+//# sourceMappingURL=juego-paices.js.map
 
 /***/ }),
 
@@ -2141,7 +2193,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/*\n\nform {\n    border: 10px solid #f1f1f1;\n    padding: 10px;\n    background:gray;\n}\n\ninput[type=text], input[type=password] {\n    width: 100%;\n    padding: 12px 20px;\n    margin: 8px 0;\n    display: inline-block;\n    border: 1px solid #ccc;\n    box-sizing: border-box;\n}\n\nbutton {\n    background-color: #4CAF50;\n    color: white;\n    padding: 14px 20px;\n    margin: 8px 0;\n    border: none;\n    cursor: pointer;\n    width: 100%;\n}\n\nbutton:hover {\n    opacity: 0.8;\n}\n\n.cancelbtn {\n    width: auto;\n    padding: 10px 18px;\n    background-color: #f44336;\n}\n.aceptbtn {\n    width: auto;\n    padding: 10px 18px;\n    background-color: #3664F4;\n}\n.imgcontainer {\n    text-align: center;\n    margin: 24px 0 12px 0;\n}\n\nimg.avatar {\n    width: 40%;\n    border-radius: 50%;\n}\n\n.container {\n    padding: 16px;\n}\n\nspan.psw {\n    float: right;\n    padding-top: 16px;\n}\n.panel\n{\n    height: 600px;\n    background-image: url(\"../../../assets/imagenes/background.gif\");\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: relative;\n}\n*/\n/* Change styles for span and cancel button on extra small screens */\n/*\n@media screen and (max-width: 300px) {\n    span.psw {\n       display: block;\n       float: none;\n    }\n    .cancelbtn {\n       width: 100%;\n    }\n}\n*//*===============================================================*/\n\nform {\n      \n    \n    width: 100%;\n    margin: 0; padding: 0;\n\n    height: 600px;\n  /*  background-image: url(\"../../../assets/imagenes/cascadacueva.gif\");*/\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: relative;\n\n}/*==============================================================================*/\n\n.button {\n    background-color: rgb(22, 7, 245); /* Green */\n    border: none;\n    color: white;\n    padding: 20px;\n    text-align: center;\n    text-decoration: none;\n    display: inline-block;\n    font-size: 16px;\n    margin: 4px 2px;\n    cursor: pointer;\n}\n.button5 {border-radius: 50%;}\n.button3 {border-radius: 8px;}\n\n.fondo{\nbackground: url(" + escape(__webpack_require__("../../../../../src/assets/imagenes/puentearroyo.gif")) + ") no-repeat center fixed; \nbackground-size: cover;\n}\n/*===================================================================================*/\nlabel{\n    font-family: 'Press Start 2P',cursive; \n    color: #FFFFFF;\n    font-size: 13px;\n}\n.centro{\n    margin-right: auto;\n    margin-left: auto;\n    width: 500px;\n    border: 10px solid rgba(51, 8, 243, 0.49);\n    background: rgba(112, 246, 168, 0.43);\n    text-align: center;\n    -ms-flex-align: center;\n        align-items: center;\n   \n}\n\n\n\n\n\n.cancelbtn {\n    width: auto;\n    padding: 10px 18px;\n    background-color: #f44336;\n}\n.aceptbtn {\n    width: auto;\n    padding: 10px 18px;\n    background-color: #3664F4;\n}\n.imgcontainer {\n    text-align: center;\n    margin: 24px 0 12px 0;\n}\n\nimg.avatar {\n    width: 40%;\n    border-radius: 50%;\n}\n\n.container {\n    padding: 16px;\n}\n\nspan.psw {\n    float: right;\n    padding-top: 16px;\n}\n\n/* Change styles for span and cancel button on extra small screens */\n@media screen and (max-width: 300px) {\n    span.psw {\n       display: block;\n       float: none;\n    }\n    .cancelbtn {\n       width: 100%;\n    }\n}\n\n\n\n\n\n", ""]);
+exports.push([module.i, "/*\n\nform {\n    border: 10px solid #f1f1f1;\n    padding: 10px;\n    background:gray;\n}\n\ninput[type=text], input[type=password] {\n    width: 100%;\n    padding: 12px 20px;\n    margin: 8px 0;\n    display: inline-block;\n    border: 1px solid #ccc;\n    box-sizing: border-box;\n}\n\nbutton {\n    background-color: #4CAF50;\n    color: white;\n    padding: 14px 20px;\n    margin: 8px 0;\n    border: none;\n    cursor: pointer;\n    width: 100%;\n}\n\nbutton:hover {\n    opacity: 0.8;\n}\n\n.cancelbtn {\n    width: auto;\n    padding: 10px 18px;\n    background-color: #f44336;\n}\n.aceptbtn {\n    width: auto;\n    padding: 10px 18px;\n    background-color: #3664F4;\n}\n.imgcontainer {\n    text-align: center;\n    margin: 24px 0 12px 0;\n}\n\nimg.avatar {\n    width: 40%;\n    border-radius: 50%;\n}\n\n.container {\n    padding: 16px;\n}\n\nspan.psw {\n    float: right;\n    padding-top: 16px;\n}\n.panel\n{\n    height: 600px;\n    background-image: url(\"../../../assets/imagenes/background.gif\");\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: relative;\n}\n*/\n/* Change styles for span and cancel button on extra small screens */\n/*\n@media screen and (max-width: 300px) {\n    span.psw {\n       display: block;\n       float: none;\n    }\n    .cancelbtn {\n       width: 100%;\n    }\n}\n*//*===============================================================*/\n\nform {\n      \n    \n    width: 100%;\n    margin: 0; padding: 0;\n\n    height: 600px;\n  /*  background-image: url(\"../../../assets/imagenes/cascadacueva.gif\");*/\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: relative;\n\n}/*==============================================================================*/\n\n.button {\n    background-color: rgb(22, 7, 245); /* Green */\n    border: none;\n    color: white;\n    padding: 20px;\n    text-align: center;\n    text-decoration: none;\n    display: inline-block;\n    font-size: 16px;\n    margin: 4px 2px;\n    cursor: pointer;\n}\n.button5 {border-radius: 50%;}\n.button3 {border-radius: 8px;}\n\n.fondo{\nbackground: url(" + escape(__webpack_require__("../../../../../src/assets/imagenes/puentearroyo.gif")) + ") no-repeat center fixed; \nbackground-size: cover;\n}\n/*===================================================================================*/\nlabel{\n    font-family: 'Press Start 2P',cursive; \n    color: #FFFFFF;\n    font-size: 13px;\n}\n.centro{\n    margin-right: auto;\n    margin-left: auto;\n    width: 500px;\n    border: 10px solid rgba(51, 8, 243, 0.49);\n    background: rgba(112, 246, 168, 0.43);\n    text-align: center;\n    -ms-flex-align: center;\n        align-items: center;\n   \n}\n\n\n\n\n\n.cancelbtn {\n    width: auto;\n    padding: 10px 18px;\n    background-color: #f44336;\n}\n.aceptbtn {\n    width: auto;\n    padding: 10px 18px;\n    background-color: #3664F4;\n}\n.imgcontainer {\n    text-align: center;\n    margin: 24px 0 12px 0;\n}\n\nimg.avatar {\n    width: 40%;\n    border-radius: 50%;\n    \n    \n}\n\n.container {\n    padding: 16px;\n}\n\nspan.psw {\n    float: right;\n    padding-top: 16px;\n}\n\n/* Change styles for span and cancel button on extra small screens */\n@media screen and (max-width: 300px) {\n    span.psw {\n       display: block;\n       float: none;\n    }\n    .cancelbtn {\n       width: 100%;\n    }\n}\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -2154,7 +2206,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/componentes/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--div style=\"margin: 20% auto; width: 30%;\">\n  <div class=\"row\">\n    <div class=\"col-lg-6\">\n      Usuario\n    </div>\n    <div class=\"col-lg-6\">\n      <input type=\"text\"  [(ngModel)]=\"usuario\">\n    </div>\n  </div>\n  <div class=\"row\" style=\"margin-top: 5px\">\n    <div class=\"col-lg-6\">\n      Clave\n    </div>\n    <div class=\"col-lg-6\">\n      <input type=\"password\" [(ngModel)]=\"clave\">\n    </div>\n  </div>\n  <div class=\"row\" style=\"text-align: center; margin-top: 10px\">\n    <div class=\"col-lg-12\">\n      <button (click)=\"Entrar()\" class=\"btn btn-info btn-lg\" >Entrar</button>\n    </div>\n  </div>\n</div-->\n<!--\n<div class=\"panel panel-default\">\n <div class=\"container\" >\n  <div class=\"jumbotron\" style=\"padding:50px;\">\n    <form action=\"return true;\">\n      <div class=\"imgcontainer\">\n        <img src=\"../../../assets/imagenes/login_here.jpg\" alt=\"Avatar\" class=\"avatar\" max-width=\"104\" >\n      </div>\n\n      <div class=\"container\">\n        <label><b>Usuario</b></label>\n        <input type=\"text\" placeholder=\"Usuario\"  [(ngModel)]=\"usuario\"  name=\"uname\" required>\n\n        <label><b>Clave</b></label>\n        <input type=\"password\" placeholder=\"Clave\"  [(ngModel)]=\"clave\" name=\"psw\" required>\n            \n        <button *ngIf=\"logeando\"  (click)=\"MoverBarraDeProgreso()\" >Ingresar</button>\n       \n        <div *ngIf=\"!logeando\" class=\"progress\">\n            <div class=\"progress-bar progress-bar-info progress-bar-striped active\" [class]=\"clase\" role=\"progressbar\" aria-valuenow=\"10\" aria-valuemin=\"0\" aria-valuemax=\"100\" [style.width]=\"ProgresoDeAncho\" >\n              {{progresoMensaje}} - {{progreso}}%\n            </div>\n        </div>\n       \n        <input type=\"checkbox\" checked=\"checked\"> Recordar mis datos\n      </div>\n\n      <div class=\"container\" style=\"background-color:#f1f1f1\">\n        <button type=\"button\" class=\"cancelbtn\">Cancelar</button>\n        <button type=\"button\" class=\"aceptbtn\" routerLink=\"/Registro\" >Registrarse</button>\n        <span class=\"psw\">Te olvidaste <a href=\"#\">la clave?</a></span>\n      </div>\n     \n    </form>\n  </div>\n</div>\n</div>\n-->\n\n\n<html>\n<head><base href=\"/TP_LAV4_2017-master/\"></head>\n<body style=\"background-color:lightseagreen;\" class=\"fondo\"  >\n\n  <br><br><br><br><br><br>\n\n<form name=\"juego\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\n    <div class=\"centro\">\n      <h2></h2>\n            \n      <div class=\"imgcontainer\">\n          <img src=\"../../../../assets/imagenes/login_here.jpg\" alt=\"Avatar\" class=\"avatar\" max-width=\"104\" >\n        </div>\n<!--\"../../TP_LAV4_2017/assets/imagenes/login.gif\"-->\n       <label><b>Usuario</b></label>\n        <input type=\"text\" placeholder=\"Usuario\"  [(ngModel)]=\"usuario\"  name=\"uname\" required>\n<h5></h5>\n        <label><b>Clave</b></label>\n        <input type=\"password\" placeholder=\"Clave\"  [(ngModel)]=\"clave\" name=\"psw\" required>\n            \n        \n       \n        <div *ngIf=\"!logeando\" class=\"progress\">\n            <div class=\"progress-bar progress-bar-info progress-bar-striped active\" [class]=\"clase\" role=\"progressbar\" aria-valuenow=\"10\" aria-valuemin=\"0\" aria-valuemax=\"100\" [style.width]=\"ProgresoDeAncho\" >\n              {{progresoMensaje}} - {{progreso}}%\n            </div>\n        </div>\n       \n        \n        <h2></h2>\n        <button class=\"button button5\" *ngIf=\"logeando\"  (click)=\"MoverBarraDeProgreso()\" >Ingresar</button>\n        <button class=\"button button5\" routerLink=\"/Registro\" >Registrarse</button>\n        <H2></H2>\n      </div>\n\n    \n        \n    \n     \n      <h3></h3>\n  \n</form>\n\n</body>\n</html>"
+module.exports = "<!--div style=\"margin: 20% auto; width: 30%;\">\n  <div class=\"row\">\n    <div class=\"col-lg-6\">\n      Usuario\n    </div>\n    <div class=\"col-lg-6\">\n      <input type=\"text\"  [(ngModel)]=\"usuario\">\n    </div>\n  </div>\n  <div class=\"row\" style=\"margin-top: 5px\">\n    <div class=\"col-lg-6\">\n      Clave\n    </div>\n    <div class=\"col-lg-6\">\n      <input type=\"password\" [(ngModel)]=\"clave\">\n    </div>\n  </div>\n  <div class=\"row\" style=\"text-align: center; margin-top: 10px\">\n    <div class=\"col-lg-12\">\n      <button (click)=\"Entrar()\" class=\"btn btn-info btn-lg\" >Entrar</button>\n    </div>\n  </div>\n</div-->\n<!--\n<div class=\"panel panel-default\">\n <div class=\"container\" >\n  <div class=\"jumbotron\" style=\"padding:50px;\">\n    <form action=\"return true;\">\n      <div class=\"imgcontainer\">\n        <img src=\"../../../assets/imagenes/login_here.jpg\" alt=\"Avatar\" class=\"avatar\" max-width=\"104\" >\n      </div>\n\n      <div class=\"container\">\n        <label><b>Usuario</b></label>\n        <input type=\"text\" placeholder=\"Usuario\"  [(ngModel)]=\"usuario\"  name=\"uname\" required>\n\n        <label><b>Clave</b></label>\n        <input type=\"password\" placeholder=\"Clave\"  [(ngModel)]=\"clave\" name=\"psw\" required>\n            \n        <button *ngIf=\"logeando\"  (click)=\"MoverBarraDeProgreso()\" >Ingresar</button>\n       \n        <div *ngIf=\"!logeando\" class=\"progress\">\n            <div class=\"progress-bar progress-bar-info progress-bar-striped active\" [class]=\"clase\" role=\"progressbar\" aria-valuenow=\"10\" aria-valuemin=\"0\" aria-valuemax=\"100\" [style.width]=\"ProgresoDeAncho\" >\n              {{progresoMensaje}} - {{progreso}}%\n            </div>\n        </div>\n       \n        <input type=\"checkbox\" checked=\"checked\"> Recordar mis datos\n      </div>\n\n      <div class=\"container\" style=\"background-color:#f1f1f1\">\n        <button type=\"button\" class=\"cancelbtn\">Cancelar</button>\n        <button type=\"button\" class=\"aceptbtn\" routerLink=\"/Registro\" >Registrarse</button>\n        <span class=\"psw\">Te olvidaste <a href=\"#\">la clave?</a></span>\n      </div>\n     \n    </form>\n  </div>\n</div>\n</div>\n-->\n\n\n<html>\n<head></head>\n<body style=\"background-color:lightseagreen;\" class=\"fondo\"  >\n\n  <br><br><br><br><br><br>\n\n<form name=\"juego\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\n    <div class=\"centro\">\n      <h2></h2>\n            \n      <div class=\"imgcontainer\">\n          <img src=\"../../../assets/imagenes/login_here.jpg\" alt=\"Avatar\" class=\"avatar\" max-width=\"104\" >\n        </div>\n<!--\"../../TP_LAV4_2017/assets/imagenes/login.gif\"-->\n       <label><b>Usuario</b></label>\n        <input type=\"text\" placeholder=\"Usuario\"  [(ngModel)]=\"usuario\"  name=\"uname\" required>\n<h5></h5>\n        <label><b>Clave</b></label>\n        <input type=\"password\" placeholder=\"Clave\"  [(ngModel)]=\"clave\" name=\"psw\" required>\n            \n        \n       \n        <div *ngIf=\"!logeando\" class=\"progress\">\n            <div class=\"progress-bar progress-bar-info progress-bar-striped active\" [class]=\"clase\" role=\"progressbar\" aria-valuenow=\"10\" aria-valuemin=\"0\" aria-valuemax=\"100\" [style.width]=\"ProgresoDeAncho\" >\n              {{progresoMensaje}} - {{progreso}}%\n            </div>\n        </div>\n       \n        \n        <h2></h2>\n        <button class=\"button button5\" *ngIf=\"logeando\"  (click)=\"MoverBarraDeProgreso()\" >Ingresar</button>\n        <button class=\"button button5\" routerLink=\"/Registro\" >Registrarse</button>\n        <H2></H2>\n      </div>\n\n    \n        \n    \n     \n      <h3></h3>\n  \n</form>\n\n</body>\n</html>"
 
 /***/ }),
 
@@ -2455,7 +2507,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/componentes/menu-card/menu-card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\r\n<html>\r\n  <body style=\"background-color:blue\">\r\n    <div class=\"container\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\r\n<div class=\"container\" >\r\n    <div class=\"card\">\r\n      <img class=\"img-thumbnail\"   src=\"./assets/imagenes/quiensoy.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n      <h4>Velocidad y agilidad aritmética </h4>\r\n\r\n      <p>           <button class=\"button\"  (click)=\"Juego('Agilidad')\">Jugar</button></p>\r\n    \r\n    </div>\r\n  \r\n    <div class=\"card\">\r\n      <img class=\"img-thumbnail\" src=\"./assets/imagenes/ppt.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n      <h4>Piedra Papel o Tijera</h4>\r\n\r\n      <p>           <button class=\"button\"  (click)=\"Juego('PPT')\">Jugar</button></p>\r\n    </div>\r\n    <div class=\"card\">\r\n      <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/adivina.png\" alt=\"Avatar\" style=\"width:100%\">\r\n      <h4>Adivina el número secreto</h4>\r\n\r\n      <p>           <button class=\"button\"  (click)=\"Juego('Adivina')\">Jugar</button></p>\r\n    </div>\r\n    <div class=\"card\">\r\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/quiensoy3.png\" alt=\"Avatar\" style=\"width:100%\">\r\n        <h4>Juego Propio</h4>\r\n  \r\n        <p>           <button class=\"button\"  (click)=\"Juego('Adivina')\">Jugar</button></p>\r\n      </div>\r\n\r\n      <div class=\"card\">\r\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/chequear.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n        <H4>Anagrama de Palabra</H4>\r\n      \r\n        <p>           <button class=\"button\"  (click)=\"Juego('Anagrama')\">Jugar</button></p>\r\n      </div>\r\n      <div class=\"card\">\r\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/chequear.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n        <H4>Tateti</H4>\r\n        <p>           <button class=\"button\"  (click)=\"Juego('tateti')\">Jugar</button></p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</body>\r\n  </html>  \r\n-->\r\n  \r\n\r\n<div class=\"container\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\r\n    <div class=\"card\">\r\n        <img class=\"img-thumbnail\"   src=\"./assets/imagenes/aritmetica.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n      <H4>Velocidad aritmética </H4>\r\n  \r\n\r\n      <p>           <button class=\"btn2 red\"  (click)=\"Juego('Agilidad')\">Jugar</button></p>\r\n    \r\n    </div>\r\n  \r\n       <div class=\"card\">\r\n          <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/numeros.png\" alt=\"Avatar\" style=\"width:100%\">\r\n      <H4>Adivina el número</H4>\r\n    \r\n      <p>           <button class=\"btn2 red\"  (click)=\"Juego('Adivina')\">Jugar</button></p>\r\n    </div>\r\n\r\n    <div class=\"card\">\r\n        <img class=\"img-thumbnail\" src=\"./assets/imagenes/ppt.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n        <H4>Piedra Papel o Tijera</H4>\r\n       \r\n        <p>           <button class=\"btn2 red\"  (click)=\"Juego('PPT')\">Jugar</button></p>\r\n      </div>\r\n\r\n    <div class=\"card\">\r\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/anagrama.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n        <H4>Anagrama de Palabra</H4>\r\n      \r\n        <p>           <button class=\"btn2 red\"  (click)=\"Juego('Anagrama')\">Jugar</button></p>\r\n      </div>\r\n \r\n      <div class=\"card\">\r\n          <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/tateti.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n          <H4>Tateti</H4>\r\n        \r\n          <p>           <button class=\"btn2 red\"  (click)=\"Juego('tateti')\">Jugar</button></p>\r\n        </div>\r\n  </div>\r\n\r\n"
+module.exports = "<!--\r\n<html>\r\n  <body style=\"background-color:blue\">\r\n    <div class=\"container\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\r\n<div class=\"container\" >\r\n    <div class=\"card\">\r\n      <img class=\"img-thumbnail\"   src=\"./assets/imagenes/quiensoy.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n      <h4>Velocidad y agilidad aritmética </h4>\r\n\r\n      <p>           <button class=\"button\"  (click)=\"Juego('Agilidad')\">Jugar</button></p>\r\n    \r\n    </div>\r\n  \r\n    <div class=\"card\">\r\n      <img class=\"img-thumbnail\" src=\"./assets/imagenes/ppt.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n      <h4>Piedra Papel o Tijera</h4>\r\n\r\n      <p>           <button class=\"button\"  (click)=\"Juego('PPT')\">Jugar</button></p>\r\n    </div>\r\n    <div class=\"card\">\r\n      <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/adivina.png\" alt=\"Avatar\" style=\"width:100%\">\r\n      <h4>Adivina el número secreto</h4>\r\n\r\n      <p>           <button class=\"button\"  (click)=\"Juego('Adivina')\">Jugar</button></p>\r\n    </div>\r\n    <div class=\"card\">\r\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/quiensoy3.png\" alt=\"Avatar\" style=\"width:100%\">\r\n        <h4>Juego Propio</h4>\r\n  \r\n        <p>           <button class=\"button\"  (click)=\"Juego('Adivina')\">Jugar</button></p>\r\n      </div>\r\n\r\n      <div class=\"card\">\r\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/chequear.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n        <H4>Anagrama de Palabra</H4>\r\n      \r\n        <p>           <button class=\"button\"  (click)=\"Juego('Anagrama')\">Jugar</button></p>\r\n      </div>\r\n      <div class=\"card\">\r\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/chequear.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n        <H4>Tateti</H4>\r\n        <p>           <button class=\"button\"  (click)=\"Juego('tateti')\">Jugar</button></p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</body>\r\n  </html>  \r\n-->\r\n  \r\n\r\n<div class=\"container\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\r\n    <div class=\"card\">\r\n        <img class=\"img-thumbnail\"   src=\"./assets/imagenes/aritmetica.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n      <H4>Velocidad aritmética </H4>\r\n  \r\n\r\n      <p>           <button class=\"btn2 red\"  (click)=\"Juego('Agilidad')\">Jugar</button></p>\r\n    \r\n    </div>\r\n  \r\n       <div class=\"card\">\r\n          <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/numeros.png\" alt=\"Avatar\" style=\"width:100%\">\r\n      <H4>Adivina el número</H4>\r\n    \r\n      <p>           <button class=\"btn2 red\"  (click)=\"Juego('Adivina')\">Jugar</button></p>\r\n    </div>\r\n\r\n    <div class=\"card\">\r\n        <img class=\"img-thumbnail\" src=\"./assets/imagenes/ppt.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n        <H4>Piedra Papel o Tijera</H4>\r\n       \r\n        <p>           <button class=\"btn2 red\"  (click)=\"Juego('PPT')\">Jugar</button></p>\r\n      </div>\r\n\r\n    <div class=\"card\">\r\n        <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/anagrama.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n        <H4>Anagrama de Palabra</H4>\r\n      \r\n        <p>           <button class=\"btn2 red\"  (click)=\"Juego('Anagrama')\">Jugar</button></p>\r\n      </div>\r\n \r\n      <div class=\"card\">\r\n          <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/tateti.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n          <H4>Tateti</H4>\r\n        \r\n          <p>           <button class=\"btn2 red\"  (click)=\"Juego('tateti')\">Jugar</button></p>\r\n        </div>\r\n        <div class=\"card\">\r\n          <img  class=\"img-thumbnail\"  src=\"./assets/imagenes/trivia.jpg\" alt=\"Avatar\" style=\"width:100%\">\r\n          <H4>Trivia</H4>\r\n        \r\n          <p>           <button class=\"btn2 red\"  (click)=\"Juego('trivia')\">Jugar</button></p>\r\n        </div>\r\n  </div>\r\n\r\n"
 
 /***/ }),
 
@@ -2500,6 +2552,8 @@ var MenuCardComponent = (function () {
                 break;
             case 'tateti':
                 this.router.navigate(['/Juegos/tateti']);
+            case 'trivia':
+                this.router.navigate(['/Juegos/Trivia']);
                 break;
         }
     };
@@ -2565,7 +2619,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);", ""]);
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\r\n\r\n#cssmenu {\r\n  padding: 0;\r\n  margin: 0;\r\n  border: 0;\r\n}\r\n\r\n#cssmenu ul,\r\n#cssmenu li {\r\n  list-style: none;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n#cssmenu ul {\r\n  position: relative;\r\n  z-index: 597;\r\n}\r\n\r\n#cssmenu ul li {\r\n  float: left;\r\n  min-height: 1px;\r\n  vertical-align: middle;\r\n}\r\n\r\n#cssmenu ul li.hover,\r\n#cssmenu ul li:hover {\r\n  position: relative;\r\n  z-index: 599;\r\n  cursor: default;\r\n}\r\n\r\n#cssmenu ul ul {\r\n  visibility: hidden;\r\n  position: absolute;\r\n  top: 100%;\r\n  left: 0;\r\n  z-index: 598;\r\n  width: 100%;\r\n}\r\n\r\n#cssmenu ul ul li {\r\n  float: none;\r\n}\r\n\r\n#cssmenu ul ul ul {\r\n  top: 0;\r\n  left: auto;\r\n  right: -99.5%;\r\n}\r\n\r\n#cssmenu ul li:hover>ul {\r\n  visibility: visible;\r\n}\r\n\r\n#cssmenu ul ul {\r\n  bottom: 0;\r\n  left: 0;\r\n}\r\n\r\n#cssmenu ul ul {\r\n  margin-top: 0;\r\n}\r\n\r\n#cssmenu ul ul li {\r\n  font-weight: normal;\r\n}\r\n\r\n#cssmenu a {\r\n  display: block;\r\n  line-height: 1em;\r\n  text-decoration: none;\r\n}\r\n#cssmenu {\r\n    background: #333;\r\n    border-bottom: 4px solid #1b9bff;\r\n    font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;\r\n    font-size: 12px;\r\n  }\r\n  \r\n  #cssmenu>ul {\r\n    *display: inline-block;\r\n  }\r\n  \r\n  #cssmenu:after,\r\n  #cssmenu ul:after {\r\n    content: '';\r\n    display: block;\r\n    clear: both;\r\n  }\r\n  #cssmenu>ul>li>a {\r\n    line-height: 48px;\r\n  }\r\n  \r\n  #cssmenu ul ul li:first-child>a {\r\n    border-top: 1px solid #0082e7;\r\n  }\r\n  \r\n  #cssmenu ul ul li:hover>a {\r\n    background: #35a6ff;\r\n  }\r\n  \r\n  #cssmenu ul ul li:last-child>a {\r\n    border-radius: 0 0 3px 3px;\r\n    box-shadow: 0 1px 0 #1b9bff;\r\n  }\r\n  \r\n  #cssmenu ul ul li:last-child:hover>a {\r\n    border-radius: 0 0 0 3px;\r\n  }\r\n  \r\n  #cssmenu ul ul li.has-sub>a:after {\r\n    content: '+';\r\n    position: absolute;\r\n    top: 50%;\r\n    right: 15px;\r\n    margin-top: -8px;\r\n  }\r\n  #cssmenu a {\r\n    background: #333;\r\n    color: #CBCBCB;\r\n    padding: 0 20px;\r\n  }\r\n  \r\n  #cssmenu ul {\r\n    text-transform: uppercase;\r\n  }\r\n  \r\n  #cssmenu ul ul {\r\n    border-top: 4px solid #1b9bff;\r\n    text-transform: none;\r\n    min-width: 190px;\r\n  }\r\n  \r\n  #cssmenu ul ul a {\r\n    background: #1b9bff;\r\n    color: #FFF;\r\n    border: 1px solid #0082e7;\r\n    border-top: 0 none;\r\n    line-height: 150%;\r\n    padding: 16px 20px;\r\n  }\r\n  \r\n  #cssmenu ul ul ul {\r\n    border-top: 0 none;\r\n  }\r\n  \r\n  #cssmenu ul ul li {\r\n    position: relative\r\n  }", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n\r\n#cssmenu {\r\n  padding: 0;\r\n  margin: 0;\r\n  border: 0;\r\n}\r\n.margin \r\n{\r\n  float: right;\r\n \r\n\r\n}\r\n\r\n#cssmenu ul,\r\n#cssmenu li {\r\n  list-style: none;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n#cssmenu ul {\r\n  position: relative;\r\n  z-index: 597;\r\n}\r\n\r\n#cssmenu ul li {\r\n  float: left;\r\n  min-height: 1px;\r\n  vertical-align: middle;\r\n}\r\n\r\n#cssmenu ul li.hover,\r\n#cssmenu ul li:hover {\r\n  position: relative;\r\n  z-index: 599;\r\n  cursor: default;\r\n}\r\n\r\n#cssmenu ul ul {\r\n  visibility: hidden;\r\n  position: absolute;\r\n  top: 100%;\r\n  left: 0;\r\n  z-index: 598;\r\n  width: 100%;\r\n}\r\n\r\n#cssmenu ul ul li {\r\n  float: none;\r\n}\r\n\r\n#cssmenu ul ul ul {\r\n  top: 0;\r\n  left: auto;\r\n  right: -99.5%;\r\n}\r\n\r\n#cssmenu ul li:hover>ul {\r\n  visibility: visible;\r\n}\r\n\r\n#cssmenu ul ul {\r\n  bottom: 0;\r\n  left: 0;\r\n}\r\n\r\n#cssmenu ul ul {\r\n  margin-top: 0;\r\n}\r\n\r\n#cssmenu ul ul li {\r\n  font-weight: normal;\r\n}\r\n\r\n#cssmenu a {\r\n  display: block;\r\n  line-height: 1em;\r\n  text-decoration: none;\r\n}\r\n#cssmenu {\r\n    background: #333;\r\n    border-bottom: 4px solid #1b9bff;\r\n    font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;\r\n    font-size: 12px;\r\n  }\r\n  \r\n  #cssmenu>ul {\r\n    *display: inline-block;\r\n  }\r\n  \r\n  #cssmenu:after,\r\n  #cssmenu ul:after {\r\n    content: '';\r\n    display: block;\r\n    clear: both;\r\n  }\r\n  #cssmenu>ul>li>a {\r\n    line-height: 48px;\r\n  }\r\n  \r\n  #cssmenu ul ul li:first-child>a {\r\n    border-top: 1px solid #0082e7;\r\n  }\r\n  \r\n  #cssmenu ul ul li:hover>a {\r\n    background: #35a6ff;\r\n  }\r\n  \r\n  #cssmenu ul ul li:last-child>a {\r\n    border-radius: 0 0 3px 3px;\r\n    box-shadow: 0 1px 0 #1b9bff;\r\n  }\r\n  \r\n  #cssmenu ul ul li:last-child:hover>a {\r\n    border-radius: 0 0 0 3px;\r\n  }\r\n  \r\n  #cssmenu ul ul li.has-sub>a:after {\r\n    content: '+';\r\n    position: absolute;\r\n    top: 50%;\r\n    right: 15px;\r\n    margin-top: -8px;\r\n  }\r\n  #cssmenu a {\r\n    background: #333;\r\n    color: #CBCBCB;\r\n    padding: 0 20px;\r\n  }\r\n  \r\n  #cssmenu ul {\r\n    text-transform: uppercase;\r\n  }\r\n  \r\n  #cssmenu ul ul {\r\n    border-top: 4px solid #1b9bff;\r\n    text-transform: none;\r\n    min-width: 190px;\r\n  }\r\n  \r\n  #cssmenu ul ul a {\r\n    background: #1b9bff;\r\n    color: #FFF;\r\n    border: 1px solid #0082e7;\r\n    border-top: 0 none;\r\n    line-height: 150%;\r\n    padding: 16px 20px;\r\n  }\r\n  \r\n  #cssmenu ul ul ul {\r\n    border-top: 0 none;\r\n  }\r\n  \r\n  #cssmenu ul ul li {\r\n    position: relative\r\n  }", ""]);
 
 // exports
 
@@ -2578,7 +2632,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/componentes/menu/menu.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--div>\n    <button routerLink=\"/Principal\">Principal</button>\n    <button (click)=\"Juego('Adivina')\">Adivina</button>\n    <button (click)=\"Juego('Agilidad')\">Agilidad</button>\n    <button (click)=\"Juego('AdivinaMasListado')\">Adivina+listado</button>\n    <button (click)=\"Juego('AgilidadaMasListado')\">Agilidad+listado</button>  \n    <button routerLink=\"/error\">Error</button>\n  \n</div-->\n\n<!--nav class=\"navbar navbar-inverse\">\n    <div class=\"container-fluid\">\n      <div class=\"navbar-header\">\n        <a class=\"navbar-brand\" routerLink=\"/Principal\">Inicio</a>\n      </div>\n      <ul class=\"nav navbar-nav\">\n        <li class=\"active\"><a routerLink=\"/Juegos\">Juegos</a></li>\n        <li><a data-toggle=\"tooltip\" title=\"Hooray!\" (click)=\"Juego('Adivina')\">Adivina</a></li>\n        <li><a  (click)=\"Juego('Agilidad')\">Agilidad</a></li>\n        <li><a  (click)=\"Juego('AdivinaMasListado')\">Adivina+listado</a></li>\n        <li><a  (click)=\"Juego('AgilidadaMasListado')\">Agilidad+listado</a></li>\n      </ul>\n      <ul class=\"nav navbar-nav navbar-right\">\n          <li><a href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> Mis Datos</a></li>\n          <li><a href=\"#\"><span class=\"glyphicon glyphicon-log-out\"></span> Salir</a></li>\n        </ul>\n    </div>\n  </nav-->\n\n\n\n\n<!--   este usaba\n  \n  <html>\n  <body style=\"background-color:aqua\">\n  <nav class=\"navbar navbar-inverse\">\n      <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n            <span class=\"icon-bar\"></span>\n                                  \n          </button>\n          <a class=\"navbar-brand\" routerLink=\"/Principal\">Inicio</a>\n          <a class=\"navbar-brand\" routerLink=\"/QuienSoy\">QuienSoy</a>\n        </div>\n        <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n            <ul class=\"nav navbar-nav\">\n                <li class=\"active\"><a routerLink=\"/Juegos\">Menú de Juegos</a></li>\n                <li><a data-toggle=\"tooltip\" title=\"Hooray!\" (click)=\"Juego('Adivina')\">Adivina</a></li>\n                <li><a  (click)=\"Juego('Agilidad')\">Agilidad</a></li>\n                <li><a  (click)=\"Juego('Adivina')\">Adivina+listado</a></li>\n                <li><a  (click)=\"Juego('Agilidad')\">Agilidad+listado</a></li>\n                <li><a  (click)=\"Juego('AgilidadaMasListado')\">PPT+listado</a></li>\n              </ul>\n              <ul class=\"nav navbar-nav navbar-right\">\n                  <li><a href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> Mis Datos</a></li>\n                  <li><a href=\"/Login\"><span class=\"glyphicon glyphicon-log-out\"></span> Salir</a></li>\n                </ul>\n        </div>\n      </div>\n    </nav>\n      \n  </body>\n  </html>\n\n-->\n\n\n\n\n<!--\n<nav class=\"navbar navbar-inverse\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\n    <div class=\"container-fluid\">\n      <div class=\"navbar-header\">\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n          <span class=\"icon-bar\"></span>\n                                \n        </button>\n        <a class=\"navbar-brand\" routerLink=\"/Principal\">Inicio</a>\n      </div>\n      <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n          <ul class=\"nav navbar-nav\">\n              <li class=\"active\"><a routerLink=\"/Juegos\">Menú de Juegos</a></li>\n              <li class=\"dropdown\">\n                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Juegos <span class=\"caret\"></span></a>\n                  <ul class=\"dropdown-menu\">\n                      <li><a  (click)=\"Juego('Adivina')\">Adivina</a></li>\n                      <li><a  (click)=\"Juego('Agilidad')\">Agilidad</a></li>\n                      <li><a  (click)=\"Juego('PPT')\">Piedra Papel Tijera</a></li>\n                      <li><a  (click)=\"Juego('Anagrama')\">Anagrama</a></li>\n                      <li><a  (click)=\"Juego('Trivia')\">Trivia Paices</a></li>\n                  </ul>\n                </li>\n              \n              <li><a  (click)=\"Juego('Listado')\">Listado</a></li>\n            </ul>\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a routerLink=\"/QuienSoy\"><span class=\"glyphicon glyphicon-user\"></span> Mis Datos</a></li>\n                <li><a routerLink=\"/Login\"><span class=\"glyphicon glyphicon-log-out\"></span> Salir</a></li>\n              </ul>\n      </div>\n    </div>\n  </nav>-->\n\n  <div id='cssmenu'>  \n      <ul>\n       \n        <li class='active '><a routerLink=\"/Principal\">Inicio</a></li>\n       \n\n        <li> <a routerLink=\"/Juegos\">Menú de Juegos</a>\n         \n          <ul>\n            <li class='has-sub '><a  (click)=\"Juego('Adivina')\">Adivina el Numero</a>\n             \n            </li>\n            <li class='has-sub '><a  (click)=\"Juego('Agilidad')\">Velicidad Aritmetica</a>            \n            </li>\n            <li class='has-sub '><a  (click)=\"Juego('Anagrama')\">Anagrama</a></li>\n             <li class='has-sub '><a  (click)=\"Juego('PPT')\">PPT</a></li>\n             <li class='has-sub '><a  (click)=\"Juego('tateti')\">Tateti</a></li> \n          </ul>\n        </li>\n        \n        <li class='active' ><a routerLink=\"/QuienSoy\" >Mis Datos</a></li>\n        <li class='active'><a href='index.html'>Salir</a></li>\n       \n          \n      </ul>\n    </div> \n\n\n\n    \n "
+module.exports = "<!--div>\n    <button routerLink=\"/Principal\">Principal</button>\n    <button (click)=\"Juego('Adivina')\">Adivina</button>\n    <button (click)=\"Juego('Agilidad')\">Agilidad</button>\n    <button (click)=\"Juego('AdivinaMasListado')\">Adivina+listado</button>\n    <button (click)=\"Juego('AgilidadaMasListado')\">Agilidad+listado</button>  \n    <button routerLink=\"/error\">Error</button>\n  \n</div-->\n\n<!--nav class=\"navbar navbar-inverse\">\n    <div class=\"container-fluid\">\n      <div class=\"navbar-header\">\n        <a class=\"navbar-brand\" routerLink=\"/Principal\">Inicio</a>\n      </div>\n      <ul class=\"nav navbar-nav\">\n        <li class=\"active\"><a routerLink=\"/Juegos\">Juegos</a></li>\n        <li><a data-toggle=\"tooltip\" title=\"Hooray!\" (click)=\"Juego('Adivina')\">Adivina</a></li>\n        <li><a  (click)=\"Juego('Agilidad')\">Agilidad</a></li>\n        <li><a  (click)=\"Juego('AdivinaMasListado')\">Adivina+listado</a></li>\n        <li><a  (click)=\"Juego('AgilidadaMasListado')\">Agilidad+listado</a></li>\n      </ul>\n      <ul class=\"nav navbar-nav navbar-right\">\n          <li><a href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> Mis Datos</a></li>\n          <li><a href=\"#\"><span class=\"glyphicon glyphicon-log-out\"></span> Salir</a></li>\n        </ul>\n    </div>\n  </nav-->\n\n\n\n\n<!--   este usaba\n  \n  <html>\n  <body style=\"background-color:aqua\">\n  <nav class=\"navbar navbar-inverse\">\n      <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n            <span class=\"icon-bar\"></span>\n                                  \n          </button>\n          <a class=\"navbar-brand\" routerLink=\"/Principal\">Inicio</a>\n          <a class=\"navbar-brand\" routerLink=\"/QuienSoy\">QuienSoy</a>\n        </div>\n        <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n            <ul class=\"nav navbar-nav\">\n                <li class=\"active\"><a routerLink=\"/Juegos\">Menú de Juegos</a></li>\n                <li><a data-toggle=\"tooltip\" title=\"Hooray!\" (click)=\"Juego('Adivina')\">Adivina</a></li>\n                <li><a  (click)=\"Juego('Agilidad')\">Agilidad</a></li>\n                <li><a  (click)=\"Juego('Adivina')\">Adivina+listado</a></li>\n                <li><a  (click)=\"Juego('Agilidad')\">Agilidad+listado</a></li>\n                <li><a  (click)=\"Juego('AgilidadaMasListado')\">PPT+listado</a></li>\n              </ul>\n              <ul class=\"nav navbar-nav navbar-right\">\n                  <li><a href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> Mis Datos</a></li>\n                  <li><a href=\"/Login\"><span class=\"glyphicon glyphicon-log-out\"></span> Salir</a></li>\n                </ul>\n        </div>\n      </div>\n    </nav>\n      \n  </body>\n  </html>\n\n-->\n\n\n\n\n<!--\n<nav class=\"navbar navbar-inverse\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\n    <div class=\"container-fluid\">\n      <div class=\"navbar-header\">\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\n          <span class=\"icon-bar\"></span>\n                                \n        </button>\n        <a class=\"navbar-brand\" routerLink=\"/Principal\">Inicio</a>\n      </div>\n      <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n          <ul class=\"nav navbar-nav\">\n              <li class=\"active\"><a routerLink=\"/Juegos\">Menú de Juegos</a></li>\n              <li class=\"dropdown\">\n                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Juegos <span class=\"caret\"></span></a>\n                  <ul class=\"dropdown-menu\">\n                      <li><a  (click)=\"Juego('Adivina')\">Adivina</a></li>\n                      <li><a  (click)=\"Juego('Agilidad')\">Agilidad</a></li>\n                      <li><a  (click)=\"Juego('PPT')\">Piedra Papel Tijera</a></li>\n                      <li><a  (click)=\"Juego('Anagrama')\">Anagrama</a></li>\n                      <li><a  (click)=\"Juego('Trivia')\">Trivia Paices</a></li>\n                  </ul>\n                </li>\n              \n              <li><a  (click)=\"Juego('Listado')\">Listado</a></li>\n            </ul>\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a routerLink=\"/QuienSoy\"><span class=\"glyphicon glyphicon-user\"></span> Mis Datos</a></li>\n                <li><a routerLink=\"/Login\"><span class=\"glyphicon glyphicon-log-out\"></span> Salir</a></li>\n              </ul>\n      </div>\n    </div>\n  </nav>-->\n\n  <div id='cssmenu'> \n      <h3 class=\"margin\">Hola</h3> \n      <ul>\n       \n        <li class='active '><a routerLink=\"/Principal\">Inicio</a></li>\n       \n\n        <li> <a routerLink=\"/Juegos\">Menú de Juegos</a>\n         \n          <ul>\n            <li class='has-sub '><a  (click)=\"Juego('Adivina')\">Adivina el Numero</a>\n             \n            </li>\n            <li class='has-sub '><a  (click)=\"Juego('Agilidad')\">Velicidad Aritmetica</a>            \n            </li>\n            <li class='has-sub '><a  (click)=\"Juego('Anagrama')\">Anagrama</a></li>\n             <li class='has-sub '><a  (click)=\"Juego('PPT')\">PPT</a></li>\n             <li class='has-sub '><a  (click)=\"Juego('tateti')\">Tateti</a></li> \n          </ul>\n        </li>\n        \n        <li class='active'><a  routerLink=\"/QuienSoy\" >Mis Datos</a></li>\n        <li class='active'><a href='index.html'>Salir</a></li>\n       \n          \n      </ul>\n\n\n    </div> \n    \n    <p>\n        Tamaño del lado {{lado}}\n      \n      </p>\n      <p>\n        1 way binding <input type=\"number\" [ngModel]=\"lado\">\n      </p>\n      <p>\n          1 way binding <input type=\"number\" [(ngModel)]=\"lado\">\n        </p>\n   \n\n\n    \n "
 
 /***/ }),
 
@@ -2607,6 +2661,9 @@ var MenuComponent = (function () {
     }
     MenuComponent.prototype.ngOnInit = function () {
     };
+    MenuComponent.prototype.llamar = function () {
+        this.algo = this.lado.TraerUsuario();
+    };
     MenuComponent.prototype.Juego = function (tipo) {
         switch (tipo) {
             case 'Adivina':
@@ -2628,6 +2685,10 @@ var MenuComponent = (function () {
     };
     return MenuComponent;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+    __metadata("design:type", Object)
+], MenuComponent.prototype, "listado", void 0);
 MenuComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-menu',
@@ -2953,7 +3014,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".imagenDeQuienSoy{\n    width: 100%;\n   \n    }\nbody {\n   font: 20px Montserrat, sans-serif;\n   line-height: 1.8;\n   color: #f5f6f7;\n    \n}\n.fondo{\n\n    background:url(" + escape(__webpack_require__("../../../../../src/assets/imagenes/comet-home.gif")) + "); /*url(\"../../../assets/imagenes/comet-home.gif\"); */\n    height: 600px;\n    background-color: black;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: relative;\n}\nimg.avatar {\n    width: 20%;\n    border-radius: 50%;\n}\n.imgcontainer {\n    text-align: center;\n    margin: 24px 0 12px 0;\n}\n.pata     {\n    font: oblique bold 120% cursive;\n  }\n  .pata2 {\n    font: small-caps 100%/200% serif;\n  }\np {font-size: 16px;}\n.margin {margin-bottom: 45px;}\n.bg-1 { \n    background:url(" + escape(__webpack_require__("../../../../../src/assets/imagenes/supernova-kepler.gif")) + "); /*url(\"../../../assets/imagenes/comet-home.gif\"); */\n    height: 600px;\n    background-color: black;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: relative;\n\n    \n}\n.bg-2 { \n    background-color: #474e5d; /* Dark Blue */\n    color: #ffffff;\n}\n.bg-3 { \n    background-color: #ffffff; /* White */\n    color: #555555;\n}\n.bg-4 { \n    background-color: #2f2f2f; /* Black Gray */\n    color: #fff;\n}\n.container-fluid {\n    padding-top: 70px;\n    padding-bottom: 70px;\n}\n.navbar {\n    padding-top: 15px;\n    padding-bottom: 15px;\n    border: 0;\n    border-radius: 0;\n    margin-bottom: 0;\n    font-size: 12px;\n    letter-spacing: 5px;\n\n    \n}\n.navbar-nav  li a:hover {\n    color: #1abc9c !important;\n}", ""]);
+exports.push([module.i, ".imagenDeQuienSoy{\n    width: 100%;\n   \n    }\nbody {\n   font: 20px Montserrat, sans-serif;\n   line-height: 1.8;\n   color: #f5f6f7;\n    \n}\n.fondo{\n\n    background:url(" + escape(__webpack_require__("../../../../../src/assets/imagenes/comet-home.gif")) + "); /*url(\"../../../assets/imagenes/comet-home.gif\"); */\n    height: 600px;\n    background-color: black;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: relative;\n}\nimg.avatar {\n    width: 20%;\n    border-radius: 50%;\n}\n.imgcontainer {\n\n    text-align: center;\n    margin: 24px 0 12px 0;\n}\n\n.pata     {\n    font: oblique bold 120% cursive;\n  }\n  .pata2 {\n    font: small-caps 100%/200% serif;\n  }\np {font-size: 16px;}\n.margin {margin-bottom: 45px;}\n.bg-1 { \n    background:url(" + escape(__webpack_require__("../../../../../src/assets/imagenes/supernova-kepler.gif")) + "); /*url(\"../../../assets/imagenes/comet-home.gif\"); */\n    height: 600px;\n    background-color: black;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: relative;\n\n    \n}\n.bg-2 { \n    background-color: #474e5d; /* Dark Blue */\n    color: #ffffff;\n}\n.bg-3 { \n    background-color: #ffffff; /* White */\n    color: #555555;\n}\n.bg-4 { \n    background-color: #2f2f2f; /* Black Gray */\n    color: #fff;\n}\n.container-fluid {\n    padding-top: 70px;\n    padding-bottom: 70px;\n}\n.navbar {\n    padding-top: 15px;\n    padding-bottom: 15px;\n    border: 0;\n    border-radius: 0;\n    margin-bottom: 0;\n    font-size: 12px;\n    letter-spacing: 5px;\n\n    \n}\n.margin {margin-bottom: 45px;}\n\n.navbar-nav  li a:hover {\n    color: #1abc9c !important;\n}", ""]);
 
 // exports
 
@@ -2966,7 +3027,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/componentes/quien-soy/quien-soy.component.html":
 /***/ (function(module, exports) {
 
-module.exports = " \n <app-menu></app-menu>\n\n  <html> \n    <head>\n\n        <base href=\"/TP_LAV4_2017/\">\n    </head>\n    <body  class=\"pata\" style=\"background: url(../../../../../assets/imagenes/supernova-kepler.gif)\"  >\n\n    \n\n  \n  <!-- First Container -->\n  <div id =\"quiwn\" class=\"fondo\" class=\"container-fluid bg-1 text-center\">\n      \n    <h3 class=\"margin\">Quién Soy? </h3>\n    <h3 class=\"margin\">       Alan Ruiz </h3>\n    <div class=\"imgcontainer\">\n    <img src=\"../../../assets/imagenes/yoquien.jpg\" alt=\"Avatar\" class=\"avatar\" max-width=\"104\">\n    <!-- para la web <img src=\"/assets/imagenes/yoquien.jpg\" alt=\"Avatar\" class=\"avatar\" max-width=\"104\">-->\n  </div>\n    <h3>Soy Un alumno de la UTN FRA</h3>\n    <p>Formato de Fuente font: oblique bold 120% cursive;</p>\n  </div>\n  \n  <!-- Second Container -->\n  <div id =\"que\" class=\"container-fluid bg-2 text-center\">\n    <h3 class=\"margin\">Esto es un trabajo práctico</h3>\n\n    <span class=\"glyphicon glyphicon-file\" class=\"pata2\"><p>Formato de letra font: small-caps 100%/200% serif;</p>\n      <p>Este Juego se trata de carrera de autos donde se debe esquivar los obstaculos para sumar puntos y llegar a la meta con el mayor puntaje\n \n    Cada universidad, cada facultad, cada carrera y obviamente cada materia en particular tiene estrategias didácticas y formas de evaluación diferentes. A pesar de que en muchos casos las universidades intentan estandarizar la forma de dictar clase para generar un orden en las planificaciones cuatrimestre a cuatrimestre, las formas de evaluación son elementales tanto para las instituciones y profesores como para los alumnos. A través de la evaluación formativa el educador busca información en el alumno para lograr comprender cómo se está\n      produciendo el proceso de aprendizaje y poder reajustar los objetivos pedagógicos. Y para el alumno es una muestra del progreso que está logrando y si puede aplicar, materializar y darle visibilidad a la comprensión del tema. Según Black y William (1998), la evaluación formativa, ayuda a que los estudiantes sean independientes a la hora del aprendizaje, es decir, se presenta como receptor, autorregulador y centro de esa misma evaluación. </p>\n     </span>\n      <a href=\"#\" class=\"btn btn-default btn-lg\">\n      <span class=\"glyphicon glyphicon-file\"></span> Descargar CV en formato PDF\n    </a>\n  </div>\n \n  <!-- Footer -->\n  <footer class=\"container-fluid bg-4 text-center\">\n    <p>Profesor Url <a href=\" https://www.octavio.com.ar\">www.octavio.com.ar</a></p> \n  </footer>\n\n</body></html>"
+module.exports = " \n <app-menu></app-menu>\n\n  <html> \n    <head>\n\n        <base href=\"/TP_LAV4_2017/\">\n    </head>\n    <body  class=\"pata\" style=\"background: url(../../../../../assets/imagenes/supernova-kepler.gif)\"  >\n\n    \n\n   \n  <!-- First Container -->\n  <div id =\"quiwn\" class=\"fondo\" class=\"container-fluid bg-1 text-center\">\n      \n    <h3 class=\"margin\">Quién Soy? </h3>\n    <h3 class=\"margin\">       Alan Ruiz </h3>\n    <div class=\"imgcontainer\">\n    <img src=\"../../../assets/imagenes/yoquien.jpg\" alt=\"Avatar\" class=\"avatar\" max-width=\"104\">\n  \n    <!-- para la web <img src=\"/assets/imagenes/yoquien.jpg\" alt=\"Avatar\" class=\"avatar\" max-width=\"104\">-->\n  </div>\n    <h3>Soy Un alumno de la UTN FRA</h3>\n    <p>Formato de Fuente font: oblique bold 120% cursive;</p>\n  </div>\n  \n  <!-- Second Container -->\n  <div id =\"que\" class=\"container-fluid bg-2 text-center\">\n    <h3 class=\"margin\">Esto es un trabajo práctico</h3>\n\n    <span class=\"glyphicon glyphicon-file\" class=\"pata2\"><p>Formato de letra font: small-caps 100%/200% serif;</p>\n      <p>Este Juego se trata de carrera de autos donde se debe esquivar los obstaculos para sumar puntos y llegar a la meta con el mayor puntaje\n \n    Cada universidad, cada facultad, cada carrera y obviamente cada materia en particular tiene estrategias didácticas y formas de evaluación diferentes. A pesar de que en muchos casos las universidades intentan estandarizar la forma de dictar clase para generar un orden en las planificaciones cuatrimestre a cuatrimestre, las formas de evaluación son elementales tanto para las instituciones y profesores como para los alumnos. A través de la evaluación formativa el educador busca información en el alumno para lograr comprender cómo se está\n      produciendo el proceso de aprendizaje y poder reajustar los objetivos pedagógicos. Y para el alumno es una muestra del progreso que está logrando y si puede aplicar, materializar y darle visibilidad a la comprensión del tema. Según Black y William (1998), la evaluación formativa, ayuda a que los estudiantes sean independientes a la hora del aprendizaje, es decir, se presenta como receptor, autorregulador y centro de esa misma evaluación. </p>\n     </span>\n      <a href=\"#\" class=\"btn btn-default btn-lg\">\n      <span class=\"glyphicon glyphicon-file\"></span> Descargar CV en formato PDF\n    </a>\n  </div>\n \n  <!-- Footer -->\n  <footer class=\"container-fluid bg-4 text-center\">\n    <p>Profesor Url <a href=\" https://www.octavio.com.ar\">www.octavio.com.ar</a></p> \n  </footer>\n\n</body></html>"
 
 /***/ }),
 
@@ -3524,6 +3585,240 @@ var _a, _b, _c;
 
 /***/ }),
 
+/***/ "../../../../../src/app/componentes/trivia-paices-mas-listado/trivia-paices-mas-listado.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/trivia-paices-mas-listado/trivia-paices-mas-listado.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <div class=\"col-sm-6\">\n      \n<app-trivia-paices (enviarJuego)=\"tomarJuegoTerminado($event)\">   </app-trivia-paices> \n    </div>\n  <div class=\"col-sm-6\">\n      <app-listado-de-resultados [listado]=\"listadoParaCompartir\"> </app-listado-de-resultados>\n  </div>\n  \n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/trivia-paices-mas-listado/trivia-paices-mas-listado.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TriviaPaicesMasListadoComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__servicios_juego_service_service__ = __webpack_require__("../../../../../src/app/servicios/juego-service.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TriviaPaicesMasListadoComponent = (function () {
+    function TriviaPaicesMasListadoComponent(servicioJuego) {
+        this.servicioJuego = servicioJuego;
+    }
+    TriviaPaicesMasListadoComponent.prototype.ngOnInit = function () {
+        this.listadoParaCompartir = this.servicioJuego.InicializarLista();
+        this.lista = JSON.stringify(this.listadoParaCompartir);
+    };
+    TriviaPaicesMasListadoComponent.prototype.tomarJuegoTerminado = function (juego) {
+        this.listadoParaCompartir.push(juego);
+        this.servicioJuego.CargarLista(this.listadoParaCompartir);
+        console.log(this.listadoParaCompartir);
+        console.log(this.lista);
+    };
+    return TriviaPaicesMasListadoComponent;
+}());
+TriviaPaicesMasListadoComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-trivia-paices-mas-listado',
+        template: __webpack_require__("../../../../../src/app/componentes/trivia-paices-mas-listado/trivia-paices-mas-listado.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/componentes/trivia-paices-mas-listado/trivia-paices-mas-listado.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__servicios_juego_service_service__["a" /* JuegoServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__servicios_juego_service_service__["a" /* JuegoServiceService */]) === "function" && _a || Object])
+], TriviaPaicesMasListadoComponent);
+
+var _a;
+//# sourceMappingURL=trivia-paices-mas-listado.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/trivia-paices/trivia-paices.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\r\nform {\r\n    \r\n    width: 100%;\r\n    margin: 0; padding: 0;\r\n}\r\n\r\n.centro{\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n    width: 500px;\r\n    border: 10px solid #f1f1f1;\r\n    background: #690000;\r\n    text-align: center;\r\n    -ms-flex-align: center;\r\n        align-items: center;\r\n    \r\n   \r\n}\r\n\r\nimg{\r\n  border: 5px solid #30131C;\r\n}\r\n\r\n#snackbar {\r\n  visibility: hidden;\r\n  min-width: 250px;\r\n  margin-right: 300px;\r\n  margin-left: 300px; \r\n  \r\n  \r\n  font-family: 'Press Start 2P',cursive; \r\n  font-size: 15px;\r\n\r\n  color: #fff;\r\n  text-align: center;\r\n  border-radius: 2px;\r\n  padding: 16px;\r\n  position: fixed;\r\n  z-index: 1;\r\n  left: 5%;\r\n  bottom: 30px;\r\n}\r\n#snackbar.Ganador {\r\n  background-color: #059F2F;\r\n}\r\n#snackbar.Perdedor {\r\n  background-color: #FF0000;\r\n}\r\n#snackbar.Empate {\r\n  background-color: #FFD000;\r\n}\r\n#snackbar.show {\r\n  visibility: visible;\r\n  animation: fadein 0.5s, fadeout 0.5s 2.5s;\r\n}\r\n\r\n@keyframes fadein {\r\n  from {bottom: 0; opacity: 0;}\r\n  to {bottom: 30px; opacity: 1;}\r\n}\r\n\r\n@keyframes fadeout {\r\n  from {bottom: 30px; opacity: 1;}\r\n  to {bottom: 0; opacity: 0;}\r\n}\r\n\r\n\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/trivia-paices/trivia-paices.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div style=\"text-align:center ;font-family: 'Press Start 2P',cursive;color: white; \">\n  <h2>\n   Trivia Paices\n  </h2>\n </div>\n<form name=\"juego\" style=\"font-family: 'Press Start 2P',cursive; font-size: 10px\">\n  <div class=\"centro\">  \n      \n      <br>\n      <table border=\"0\" width=\"60%\" height=\"auto\" align=\"center\">\n          <tr>\n              <td><img class=\"img-thumbnail\" src=\"../../../assets/imagenes/{{Bandera}}.jpg\" alt=\"Avatar\" style=\"width:50%\"></td>\n             <!-- <td><img class=\"img-thumbnail\" src=\"../../TP_LAV4_2017/assets/imagenes/{{Bandera}}.jpg\" alt=\"Avatar\" style=\"width:50%\"></td>-->\n            \n          </tr>\n        \n          <tr><button *ngIf=\"!BloquearBotones\" class=\"btn2 blue\" (click)=\"Opcion1()\">{{nuevoJuego.opcion1}}</button></tr>\n          <tr><button *ngIf=\"!BloquearBotones\" class=\"btn2 blue\" (click)=\"Opcion2()\">{{nuevoJuego.opcion2}}</button></tr>\n          <tr><button *ngIf=\"!BloquearBotones\" class=\"btn2 blue\" (click)=\"Opcion3()\">{{nuevoJuego.opcion3}}</button></tr>\n          <tr><button *ngIf=\"!BloquearBotones\" class=\"btn2 blue\" (click)=\"Opcion4()\">{{nuevoJuego.opcion4}}</button></tr>\n       \n      </table>\n      <br><br>\n      <button class=\"btn2 purple\" (click)=\"GenerarPregunta()\">Generar</button>\n      <br><br>\n    </div>\n  </form>\n\n<div id=\"snackbar\">{{Mensajes}}</div> "
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/trivia-paices/trivia-paices.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TriviaPaicesComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__servicios_juego_service_service__ = __webpack_require__("../../../../../src/app/servicios/juego-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__clases_juego_paices__ = __webpack_require__("../../../../../src/app/clases/juego-paices.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var TriviaPaicesComponent = (function () {
+    function TriviaPaicesComponent(miServicio) {
+        this.miServicio = miServicio;
+        this.enviarJuego = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.CargarArrays();
+        this.GenerarPregunta();
+    }
+    TriviaPaicesComponent.prototype.GenerarPregunta = function () {
+        this.nuevoJuego = new __WEBPACK_IMPORTED_MODULE_2__clases_juego_paices__["a" /* JuegoPaices */]("Trivia Paices", false, "Alan");
+        this.nuevoJuego.jugador = this.miServicio.TraerUsuario();
+        this.i = Math.floor(Math.random() * 4);
+        this.pais = this.miArrayPaices[this.i];
+        this.nuevoJuego.opcion1 = this.pais['Opcion1'];
+        this.nuevoJuego.opcion2 = this.pais['Opcion2'];
+        this.nuevoJuego.opcion3 = this.pais['Opcion3'];
+        this.nuevoJuego.opcion4 = this.pais['Opcion4'];
+        this.nuevoJuego.respuestaVerdadera = this.pais['Correcta'];
+        this.Bandera = this.pais['Correcta'];
+        this.BloquearBotones = false;
+    };
+    TriviaPaicesComponent.prototype.Opcion1 = function () {
+        this.nuevoJuego.respuestaJugador = this.pais['Opcion1'];
+        if (this.nuevoJuego.verificar()) {
+            this.enviarJuego.emit(this.nuevoJuego);
+            this.MostarMensaje("Perfecto", true);
+        }
+        else {
+            this.enviarJuego.emit(this.nuevoJuego);
+            this.MostarMensaje("Erraste");
+        }
+        this.BloquearBotones = true;
+    };
+    TriviaPaicesComponent.prototype.Opcion2 = function () {
+        this.nuevoJuego.respuestaJugador = this.pais['Opcion2'];
+        if (this.nuevoJuego.verificar()) {
+            this.enviarJuego.emit(this.nuevoJuego);
+            this.MostarMensaje("Perfecto", true);
+        }
+        else {
+            this.enviarJuego.emit(this.nuevoJuego);
+            this.MostarMensaje("Erraste");
+        }
+        this.BloquearBotones = true;
+    };
+    TriviaPaicesComponent.prototype.Opcion3 = function () {
+        this.nuevoJuego.respuestaJugador = this.pais['Opcion3'];
+        if (this.nuevoJuego.verificar()) {
+            this.enviarJuego.emit(this.nuevoJuego);
+            this.MostarMensaje("Perfecto", true);
+        }
+        else {
+            this.enviarJuego.emit(this.nuevoJuego);
+            this.MostarMensaje("Erraste");
+        }
+        this.BloquearBotones = true;
+    };
+    TriviaPaicesComponent.prototype.Opcion4 = function () {
+        this.nuevoJuego.respuestaJugador = this.pais['Opcion4'];
+        if (this.nuevoJuego.verificar()) {
+            this.enviarJuego.emit(this.nuevoJuego);
+            this.MostarMensaje("Perfecto", true);
+        }
+        else {
+            this.enviarJuego.emit(this.nuevoJuego);
+            this.MostarMensaje("Erraste");
+        }
+        this.BloquearBotones = true;
+    };
+    TriviaPaicesComponent.prototype.CargarArrays = function () {
+        this.miArrayPaices = new Array();
+        this.miArrayPaices.push({ "Opcion1": "Brazil", "Opcion2": "Iran", "Opcion3": "Armenia", "Opcion4": "Francia", "Correcta": "Brazil" });
+        this.miArrayPaices.push({ "Opcion1": "Argentina", "Opcion2": "Italia", "Opcion3": "Nicaragua", "Opcion4": "Alemania", "Correcta": "Nicaragua" });
+        this.miArrayPaices.push({ "Opcion1": "Turquia", "Opcion2": "Camerun", "Opcion3": "Bolivia", "Opcion4": "Paraguay", "Correcta": "Camerun" });
+        this.miArrayPaices.push({ "Opcion1": "Belgica", "Opcion2": "Japon", "Opcion3": "Rusia", "Opcion4": "Peru", "Correcta": "Belgica" });
+        this.miArrayPaices.push({ "Opcion1": "Inglaterra", "Opcion2": "Argentina", "Opcion3": "Holanda", "Opcion4": "Serbia", "Correcta": "Argentina" });
+        this.miArrayPaices.push({ "Opcion1": "Cuba", "Opcion2": "Mongolia", "Opcion3": "Ucrania", "Opcion4": "Peru", "Sudafrica": "Cuba" });
+        console.log(this.miArrayPaices);
+    };
+    TriviaPaicesComponent.prototype.MostarMensaje = function (mensaje, ganador) {
+        if (mensaje === void 0) { mensaje = "este es el mensaje"; }
+        if (ganador === void 0) { ganador = false; }
+        this.Mensajes = mensaje;
+        var x = document.getElementById("snackbar");
+        if (ganador) {
+            x.className = "show Ganador";
+        }
+        else {
+            x.className = "show Perdedor";
+        }
+        var modelo = this;
+        setTimeout(function () {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+    };
+    TriviaPaicesComponent.prototype.ngOnInit = function () {
+    };
+    return TriviaPaicesComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]) === "function" && _a || Object)
+], TriviaPaicesComponent.prototype, "enviarJuego", void 0);
+TriviaPaicesComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-trivia-paices',
+        template: __webpack_require__("../../../../../src/app/componentes/trivia-paices/trivia-paices.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/componentes/trivia-paices/trivia-paices.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__servicios_juego_service_service__["a" /* JuegoServiceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__servicios_juego_service_service__["a" /* JuegoServiceService */]) === "function" && _b || Object])
+], TriviaPaicesComponent);
+
+var _a, _b;
+//# sourceMappingURL=trivia-paices.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/pipes/sexo.pipe.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3586,6 +3881,7 @@ SexoPipe = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__componentes_agilidad_mas_listado_agilidad_mas_listado_component__ = __webpack_require__("../../../../../src/app/componentes/agilidad-mas-listado/agilidad-mas-listado.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__componentes_anagrama_mas_listado_anagrama_mas_listado_component__ = __webpack_require__("../../../../../src/app/componentes/anagrama-mas-listado/anagrama-mas-listado.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__componentes_ta_te_ti_ta_te_ti_component__ = __webpack_require__("../../../../../src/app/componentes/ta-te-ti/ta-te-ti.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__componentes_trivia_paices_mas_listado_trivia_paices_mas_listado_component__ = __webpack_require__("../../../../../src/app/componentes/trivia-paices-mas-listado/trivia-paices-mas-listado.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3615,6 +3911,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 // declaro donde quiero que se dirija
 var MiRuteo = [
     { path: 'Jugadores', component: __WEBPACK_IMPORTED_MODULE_12__componentes_jugadores_listado_jugadores_listado_component__["a" /* JugadoresListadoComponent */] },
@@ -3636,6 +3933,7 @@ var MiRuteo = [
             { path: 'Anagrama', component: __WEBPACK_IMPORTED_MODULE_15__componentes_anagrama_anagrama_component__["a" /* AnagramaComponent */] },
             { path: 'AnagramaMasListado', component: __WEBPACK_IMPORTED_MODULE_19__componentes_anagrama_mas_listado_anagrama_mas_listado_component__["a" /* AnagramaMasListadoComponent */] },
             { path: 'PPTijeraMasListado', component: __WEBPACK_IMPORTED_MODULE_16__componentes_pptijera_mas_listado_pptijera_mas_listado_component__["a" /* PPTijeraMasListadoComponent */] },
+            { path: 'Trivia', component: __WEBPACK_IMPORTED_MODULE_21__componentes_trivia_paices_mas_listado_trivia_paices_mas_listado_component__["a" /* TriviaPaicesMasListadoComponent */] },
             { path: 'tateti', component: __WEBPACK_IMPORTED_MODULE_20__componentes_ta_te_ti_ta_te_ti_component__["a" /* TaTeTiComponent */] }]
     },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_3__componentes_error_error_component__["a" /* ErrorComponent */] },
